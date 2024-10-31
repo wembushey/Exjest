@@ -1,7 +1,7 @@
-# 212_Final Project
+# 212 Final Project
 
 ### This is the repo for the 212 C# final project.
-
+--- 
 ### Logs:
 
 #### 10/31
