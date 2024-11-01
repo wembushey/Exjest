@@ -1,0 +1,16 @@
+F:\212_Final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.exe
+F:\212_Final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.deps.json
+F:\212_Final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.runtimeconfig.json
+F:\212_Final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.dll
+F:\212_Final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.pdb
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.Form1.resources
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.csproj.GenerateResource.cache
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.GeneratedMSBuildEditorConfig.editorconfig
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.AssemblyInfoInputs.cache
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.AssemblyInfo.cs
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.csproj.CoreCompileInputs.cache
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.dll
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\refint\Final_Project.dll
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.pdb
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.genruntimeconfig.cache
+F:\212_Final\Final_Project\Final_Project\obj\Debug\net8.0-windows\ref\Final_Project.dll
