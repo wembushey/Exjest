@@ -10,3 +10,6 @@
 - Created general issues in the CNSA Gitea based on prompt
 - Setup new SSD for this project so it is off the C drive
 
+#### 11/1
+
+- Started to make GUI
