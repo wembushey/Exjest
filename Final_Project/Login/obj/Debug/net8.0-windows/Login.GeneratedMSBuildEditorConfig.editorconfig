@@ -14,6 +14,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Login
+<<<<<<< HEAD
 build_property.ProjectDir = F:\Exjest\Final_Project\Login\
+=======
+build_property.ProjectDir = C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\
+>>>>>>> 016b57032d7b6056c9ecb42139a9b17647708770
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

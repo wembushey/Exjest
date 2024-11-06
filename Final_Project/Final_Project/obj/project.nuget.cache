@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "bztA3GBgvnc=",
   "success": true,
   "projectFilePath": "F:\\Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
+=======
+  "dgSpecHash": "ZNKlXGlVHXE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Wayne\\Desktop\\Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
+>>>>>>> 016b57032d7b6056c9ecb42139a9b17647708770
   "expectedPackageFiles": [],
   "logs": []
 }

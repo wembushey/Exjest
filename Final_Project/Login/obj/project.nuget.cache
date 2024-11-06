@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "RfTA8oK/DiM=",
   "success": true,
   "projectFilePath": "F:\\Exjest\\Final_Project\\Login\\Login.csproj",
+=======
+  "dgSpecHash": "LoEW23jYkDE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Wayne\\Desktop\\Exjest\\Final_Project\\Login\\Login.csproj",
+>>>>>>> 016b57032d7b6056c9ecb42139a9b17647708770
   "expectedPackageFiles": [],
   "logs": []
 }
