@@ -51,6 +51,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Import";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

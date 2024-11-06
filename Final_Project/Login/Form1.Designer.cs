@@ -33,6 +33,7 @@
             textBox2 = new TextBox();
             label2 = new Label();
             label3 = new Label();
+            LoginButton = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -81,11 +82,22 @@
             label3.TabIndex = 4;
             label3.Text = "Welcome";
             // 
+            // LoginButton
+            // 
+            LoginButton.Location = new Point(140, 273);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(75, 23);
+            LoginButton.TabIndex = 5;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.Click += LoginButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(359, 352);
+            Controls.Add(LoginButton);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(textBox2);
@@ -104,5 +116,6 @@
         private TextBox textBox2;
         private Label label2;
         private Label label3;
+        private Button LoginButton;
     }
 }
