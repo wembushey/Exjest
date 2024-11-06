@@ -13,3 +13,17 @@
 #### 11/1
 
 - Started to make GUI
+
+#### 11/4
+
+- Created Github 
+- Migrated all of the Issues over
+
+#### 11/5
+
+- Fixed gitignore file
+
+#### 11/6
+
+- Made an upload page
+- Made upload page except Excel files
