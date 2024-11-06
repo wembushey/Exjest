@@ -34,9 +34,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(148, 73);
+            label1.Location = new Point(129, 54);
             label1.Name = "label1";
-            label1.Size = new Size(106, 20);
+            label1.Size = new Size(82, 15);
             label1.TabIndex = 0;
             label1.Text = "Drop File Here";
             label1.Click += label1_Click;
@@ -44,12 +44,13 @@
             // Form1
             // 
             AllowDrop = true;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(382, 193);
+            ClientSize = new Size(334, 145);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Import";
             ResumeLayout(false);
             PerformLayout();
         }
