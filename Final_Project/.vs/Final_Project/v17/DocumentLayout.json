@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\github_for_Exjest\\Final_Project\\",
+  "WorkspaceRootPath": "F:\\Exjest\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|e:\\github_for_exjest\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\exjest\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|e:\\github_for_exjest\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\exjest\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|e:\\github_for_exjest\\final_project\\final_project\\final_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|f:\\exjest\\final_project\\final_project\\final_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\final_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|e:\\github_for_exjest\\final_project\\login\\login.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\exjest\\final_project\\login\\login.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\login.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|e:\\github_for_exjest\\final_project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|f:\\exjest\\final_project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|E:\\github_for_Exjest\\Final_Project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|F:\\Exjest\\Final_Project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,45 +34,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Login",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Login\\Login.csproj",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Login\\Login.csproj",
               "RelativeDocumentMoniker": "Login\\Login.csproj",
-              "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Login\\Login.csproj",
+              "ToolTip": "F:\\Exjest\\Final_Project\\Login\\Login.csproj",
               "RelativeToolTip": "Login\\Login.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-05T07:58:50.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T07:58:50.914Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Final_Project.csproj",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
               "RelativeDocumentMoniker": "Final_Project\\Final_Project.csproj",
-              "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
+              "ToolTip": "F:\\Exjest\\Final_Project\\Final_Project\\Final_Project.csproj",
               "RelativeToolTip": "Final_Project\\Final_Project.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-01T20:09:28.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T20:09:28.577Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Login\\Form1.cs",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
-              "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Login\\Form1.cs*",
-              "RelativeToolTip": "Login\\Form1.cs*",
+              "ToolTip": "F:\\Exjest\\Final_Project\\Login\\Form1.cs",
+              "RelativeToolTip": "Login\\Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T20:04:52.849Z",
@@ -82,10 +76,10 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Login\\Form1.cs",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
-              "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Login\\Form1.cs [Design]*",
-              "RelativeToolTip": "Login\\Form1.cs [Design]*",
+              "ToolTip": "F:\\Exjest\\Final_Project\\Login\\Form1.cs [Design]",
+              "RelativeToolTip": "Login\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T20:02:47.047Z",
               "EditorCaption": " [Design]"
@@ -94,9 +88,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Form1.cs",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Final_Project\\Form1.cs",
               "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
-              "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Form1.cs",
+              "ToolTip": "F:\\Exjest\\Final_Project\\Final_Project\\Form1.cs",
               "RelativeToolTip": "Final_Project\\Form1.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAkwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,13 +101,11 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Form1.cs",
+              "DocumentMoniker": "F:\\Exjest\\Final_Project\\Final_Project\\Form1.cs",
               "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
               "ToolTip": "E:\\github_for_Exjest\\Final_Project\\Final_Project\\Form1.cs [Design]",
-              "RelativeToolTip": "Final_Project\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T19:24:32.976Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-01T19:24:32.976Z"
             }
           ]
         }
