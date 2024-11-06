@@ -31,7 +31,9 @@
             menuStrip1 = new MenuStrip();
             importToolStripMenuItem = new ToolStripMenuItem();
             xlsxToolStripMenuItem = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -56,9 +58,18 @@
             // xlsxToolStripMenuItem
             // 
             xlsxToolStripMenuItem.Name = "xlsxToolStripMenuItem";
-            xlsxToolStripMenuItem.Size = new Size(180, 22);
+            xlsxToolStripMenuItem.Size = new Size(97, 22);
             xlsxToolStripMenuItem.Text = ".xlsx";
             xlsxToolStripMenuItem.Click += xlsxToolStripMenuItem_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 37);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(776, 401);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Form1
             // 
@@ -66,6 +77,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip1;
@@ -74,6 +86,7 @@
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -83,5 +96,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem importToolStripMenuItem;
         private ToolStripMenuItem xlsxToolStripMenuItem;
+        private DataGridView dataGridView1;
     }
 }
