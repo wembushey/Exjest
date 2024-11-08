@@ -23,12 +23,13 @@ namespace Login
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // This is the username box
+            // username box
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // This is the password box
+            // Password box
+            textBox2.PasswordChar = '*';
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,22 +37,39 @@ namespace Login
             // Login button
             string username = textBox1.Text;
             string password = textBox2.Text;
+            string database = textBox3.Text;
+            string server = textBox4.Text;
 
             // Connection string with placeholders for username and password
-            string connectionString = $"Server=your_server;Database=your_database;User Id={username};Password={password};";
+            string connectionString = $"Server={server};Database={database};User Id={username};Password={password};";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Connection successful!");
+                    MessageBox.Show("Connection successful :D !");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Connection failed: {ex.Message}");
+                    MessageBox.Show($"Connection failed :( : {ex.Message}");
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
