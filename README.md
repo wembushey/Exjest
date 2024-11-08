@@ -27,3 +27,7 @@
 
 - Made an upload page
 - Made upload page except Excel files
+
+#### 11/8 
+
+- Got login page to except credentials and work
