@@ -70,3 +70,14 @@ F:\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Fr
 F:\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\System.IO.Packaging.dll
 F:\Exjest\Final_Project\Login\obj\Debug\net8.0-windows\Login.csproj.AssemblyReference.cache
 F:\Exjest\Final_Project\Login\obj\Debug\net8.0-windows\Login.csproj.Up2Date
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\obj\Debug\net8.0-windows\Login.csproj.AssemblyReference.cache
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\obj\Debug\net8.0-windows\Login.csproj.Up2Date
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Wayne\Desktop\Exjest\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
