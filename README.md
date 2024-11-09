@@ -32,4 +32,5 @@
 
 - Got login page to except credentials and work
 - Got the login page to load the main_page
+- Got the import page to be prompted when selected
 
