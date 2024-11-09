@@ -5,21 +5,28 @@ using System.Windows.Forms;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 
+using System;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+
 namespace Excel_Import
 {
-    public partial class Form1 : Form
+    public partial class ImportForm : Form
     {
-        public Form1()
+        public ImportForm()
         {
             InitializeComponent();
             // Enable drag-and-drop on the form
             this.AllowDrop = true;
-            this.DragEnter += new DragEventHandler(Form1_DragEnter);
-            this.DragDrop += new DragEventHandler(Form1_DragDrop);
+            this.DragEnter += new DragEventHandler(ImportForm_DragEnter);
+            this.DragDrop += new DragEventHandler(ImportForm_DragDrop);
         }
 
         // Event handler that does a file type check
-        private void Form1_DragEnter(object sender, DragEventArgs e)
+        private void ImportForm_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -36,7 +43,7 @@ namespace Excel_Import
         }
 
         // Event handler for DragDrop to handle the dropped file
-        private void Form1_DragDrop(object sender, DragEventArgs e)
+        private void ImportForm_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             if (files.Length > 0 && Path.GetExtension(files[0]).Equals(".xlsx", StringComparison.OrdinalIgnoreCase))
@@ -83,7 +90,7 @@ namespace Excel_Import
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            // Label click event handler (if needed)
         }
     }
 }

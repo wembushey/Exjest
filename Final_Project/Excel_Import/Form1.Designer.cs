@@ -1,6 +1,6 @@
 ﻿namespace Excel_Import
 {
-    partial class Form1
+    partial class ImportForm
     {
         /// <summary>
         ///  Required designer variable.

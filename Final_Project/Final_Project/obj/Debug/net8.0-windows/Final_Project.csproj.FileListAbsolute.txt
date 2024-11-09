@@ -82,3 +82,13 @@ F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Proje
 F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.genruntimeconfig.cache
 F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\ref\Final_Project.dll
 F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.Main_Page.resources
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.deps.json
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.runtimeconfig.json
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.exe
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.dll
+F:\finalproject\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.pdb
+F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.csproj.AssemblyReference.cache
+F:\finalproject\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Pr.95B01FB4.Up2Date

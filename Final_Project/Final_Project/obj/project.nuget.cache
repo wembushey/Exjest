@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Hb+JRQc8LLg=",
+  "dgSpecHash": "2ymN+/+Srek=",
   "success": true,
   "projectFilePath": "F:\\finalproject\\Final_Project\\Final_Project\\Final_Project.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
