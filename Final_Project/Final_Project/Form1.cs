@@ -2,9 +2,9 @@ using System;
 
 namespace Final_Project
 {
-    public partial class Form1 : Form
+    public partial class Main_Page : Form
     {
-        public Form1()
+        public Main_Page()
         {
             InitializeComponent();
         }

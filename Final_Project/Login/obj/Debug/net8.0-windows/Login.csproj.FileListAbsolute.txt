@@ -109,3 +109,8 @@ F:\finalproject\Final_Project\Login\obj\Debug\net8.0-windows\refint\Login.dll
 F:\finalproject\Final_Project\Login\obj\Debug\net8.0-windows\Login.pdb
 F:\finalproject\Final_Project\Login\obj\Debug\net8.0-windows\Login.genruntimeconfig.cache
 F:\finalproject\Final_Project\Login\obj\Debug\net8.0-windows\ref\Login.dll
+F:\finalproject\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.deps.json
+F:\finalproject\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.runtimeconfig.json
+F:\finalproject\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.exe
+F:\finalproject\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.dll
+F:\finalproject\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.pdb

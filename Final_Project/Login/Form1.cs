@@ -1,6 +1,9 @@
 using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
+using Final_Project;
 
 namespace Login
 {
@@ -48,7 +51,11 @@ namespace Login
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Connection successful :D !");
+                    // Open Final_project form after successful login
+                    Main_Page finalProjectForm = new Main_Page();
+                    finalProjectForm.Show();
+                    // Hide the login form
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {

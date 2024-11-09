@@ -194,6 +194,19 @@
             "rid": "win"
           }
         }
+      },
+      "Final_Project/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Final_Project.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Final_Project.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -587,11 +600,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Final_Project/1.0.0": {
+      "type": "project",
+      "path": "../Final_Project/Final_Project.csproj",
+      "msbuildProject": "../Final_Project/Final_Project.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "DocumentFormat.OpenXml >= 3.1.1",
+      "Final_Project >= 1.0.0",
       "System.Data.SqlClient >= 4.8.6"
     ]
   },
@@ -627,7 +646,11 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\finalproject\\Final_Project\\Final_Project\\Final_Project.csproj": {
+              "projectPath": "F:\\finalproject\\Final_Project\\Final_Project\\Final_Project.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

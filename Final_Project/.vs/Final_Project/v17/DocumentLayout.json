@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "F:\\finalproject\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|F:\\finalproject\\Final_Project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\finalproject\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|f:\\finalproject\\final_project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|F:\\finalproject\\Final_Project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,18 +28,31 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\finalproject\\Final_Project\\Final_Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
+              "ToolTip": "F:\\finalproject\\Final_Project\\Final_Project\\Form1.cs",
+              "RelativeToolTip": "Final_Project\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T23:59:22.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
               "DocumentMoniker": "F:\\finalproject\\Final_Project\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
               "ToolTip": "F:\\finalproject\\Final_Project\\Login\\Form1.cs",
               "RelativeToolTip": "Login\\Form1.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAkwDMAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T14:55:42.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\finalproject\\Final_Project\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
