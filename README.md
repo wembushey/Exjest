@@ -31,3 +31,5 @@
 #### 11/8 
 
 - Got login page to except credentials and work
+- Got the login page to load the main_page
+
