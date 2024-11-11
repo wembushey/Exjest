@@ -7,7 +7,11 @@
       "RelativeMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|solutionrelative:excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|e:\\projects\\final_project\\excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0420A161-6245-4FAA-B164-636DC1D062B5}|datahold\\datahold.csproj|e:\\projects\\final_project\\datahold\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0420A161-6245-4FAA-B164-636DC1D062B5}|datahold\\datahold.csproj|solutionrelative:datahold\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|E:\\Projects\\Final_Project\\excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|solutionrelative:excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -22,11 +26,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "config.cs",
+              "DocumentMoniker": "E:\\Projects\\Final_Project\\datahold\\config.cs",
+              "RelativeDocumentMoniker": "datahold\\config.cs",
+              "ToolTip": "E:\\Projects\\Final_Project\\datahold\\config.cs",
+              "RelativeToolTip": "datahold\\config.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T07:58:15.117Z"
             },
             {
               "$type": "Document",
@@ -36,26 +52,25 @@
               "RelativeDocumentMoniker": "Excel_Import\\Form1.cs",
               "ToolTip": "E:\\Projects\\Final_Project\\Excel_Import\\Form1.cs",
               "RelativeToolTip": "Excel_Import\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T07:52:31.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "E:\\Projects\\Final_Project\\Excel_Import\\Form1.cs",
               "RelativeDocumentMoniker": "Excel_Import\\Form1.cs",
               "ToolTip": "E:\\Projects\\Final_Project\\Excel_Import\\Form1.cs [Design]",
               "RelativeToolTip": "Excel_Import\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T07:52:28.614Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T07:52:28.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\Projects\\Final_Project\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
@@ -63,8 +78,7 @@
               "RelativeToolTip": "Login\\Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T07:49:52.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T07:49:52.214Z"
             }
           ]
         }

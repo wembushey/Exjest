@@ -39,7 +39,7 @@
             label1.Size = new Size(82, 15);
             label1.TabIndex = 0;
             label1.Text = "Drop File Here";
-            label1.Click += label1_Click;
+
             // 
             // Form1
             // 

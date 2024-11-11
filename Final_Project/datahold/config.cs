@@ -12,7 +12,7 @@ namespace datahold
         // Call this to get the connection string that was set at login
         public static string GetConnectionString()
         {
-            return $"Server={Server};Database={Database};User Id={Username};Password={Password};";
+            return $"Server={Server};Database={Database};User Id={Username};Password={Password};TrustServerCertificate=True;";
         }
     }
 }
