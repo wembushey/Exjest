@@ -3,7 +3,10 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using Excel_Import;
 using Final_Project;
+using datahold;
+
 
 namespace Login
 {
@@ -16,7 +19,7 @@ namespace Login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,21 +40,25 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Login button
+            // Get values from the textboxes
             string username = textBox1.Text;
             string password = textBox2.Text;
             string database = textBox3.Text;
             string server = textBox4.Text;
 
-            // Connection string with placeholders for username and password
-            string connectionString = $"Server={server};Database={database};User Id={username};Password={password};";
+            // Set values in Config class (this will persist in memory during runtime so that it will be lost when stoped)
+            Config.Username = username;
+            Config.Password = password;
+            Config.Database = database;
+            Config.Server = server;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Attempt to connect to the database using the saved settings
+            using (SqlConnection connection = new SqlConnection(Config.GetConnectionString()))
             {
                 try
                 {
-                    connection.Open();
-                    // Open Final_project form after successful login
+                    connection.Open();  // Try to open a connection to the database
+                                        // Open Final_project form after successful login
                     Main_Page finalProjectForm = new Main_Page();
                     finalProjectForm.Show();
                     // Hide the login form
@@ -63,6 +70,8 @@ namespace Login
                 }
             }
         }
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {

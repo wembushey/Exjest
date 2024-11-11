@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\datahold\datahold.csproj" />
     <ProjectReference Include="..\Excel_Import\Excel_Import.csproj" />
   </ItemGroup>
 
