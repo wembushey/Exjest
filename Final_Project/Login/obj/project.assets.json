@@ -47,6 +47,40 @@
           }
         }
       },
+      "ClosedXML/0.104.1": {
+        "type": "package",
+        "dependencies": {
+          "ClosedXML.Parser": "[1.2.0, 2.0.0)",
+          "DocumentFormat.OpenXml": "[3.0.1, 4.0.0)",
+          "ExcelNumberFormat": "1.1.0",
+          "RBush": "3.2.0",
+          "SixLabors.Fonts": "1.0.0",
+          "System.IO.Packaging": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "ClosedXML.Parser/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -75,6 +109,19 @@
         },
         "runtime": {
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExcelNumberFormat/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelNumberFormat.dll": {
             "related": ".xml"
           }
         }
@@ -377,6 +424,19 @@
           }
         }
       },
+      "RBush/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RBush.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RBush.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -409,6 +469,19 @@
           "runtimes/win-x86/native/sni.dll": {
             "assetType": "native",
             "rid": "win-x86"
+          }
+        }
+      },
+      "SixLabors.Fonts/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -784,6 +857,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "ClosedXML": "0.104.1",
           "DocumentFormat.OpenXml": "3.1.1",
           "Microsoft.Data.SqlClient": "5.2.2",
           "datahold": "1.0.0"
@@ -856,6 +930,40 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "ClosedXML/0.104.1": {
+      "sha512": "RVm2fUNWJlBJlg07shrfeWzrHPG5ypI/vARqdUOUbUdaog8yBw8l4IbCHf2MXt0AXtzaZqGNqhFaCAHigCBdfw==",
+      "type": "package",
+      "path": "closedxml/0.104.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "closedxml.0.104.1.nupkg.sha512",
+        "closedxml.nuspec",
+        "lib/netstandard2.0/ClosedXML.dll",
+        "lib/netstandard2.0/ClosedXML.pdb",
+        "lib/netstandard2.0/ClosedXML.xml",
+        "lib/netstandard2.1/ClosedXML.dll",
+        "lib/netstandard2.1/ClosedXML.pdb",
+        "lib/netstandard2.1/ClosedXML.xml",
+        "nuget-logo.png"
+      ]
+    },
+    "ClosedXML.Parser/1.2.0": {
+      "sha512": "w+/0tsxABS3lkSH8EUlA7IGme+mq5T/Puf3DbOiTckmSuUpAUO2LK29oXYByCcWkBv6wcRHxgWlQb1lxkwI0Tw==",
+      "type": "package",
+      "path": "closedxml.parser/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "closedxml.parser.1.2.0.nupkg.sha512",
+        "closedxml.parser.nuspec",
+        "lib/netstandard2.0/ClosedXML.Parser.dll",
+        "lib/netstandard2.0/ClosedXML.Parser.xml",
+        "lib/netstandard2.1/ClosedXML.Parser.dll",
+        "lib/netstandard2.1/ClosedXML.Parser.xml"
+      ]
+    },
     "DocumentFormat.OpenXml/3.1.1": {
       "sha512": "2z9QBzeTLNNKWM9SaOSDMegfQk/7hDuElOsmF77pKZMkFRP/GHA/W/4yOAQD9kn15N/FsFxHn3QVYkatuZghiA==",
       "type": "package",
@@ -902,6 +1010,24 @@
         "lib/net8.0/DocumentFormat.OpenXml.Framework.xml",
         "lib/netstandard2.0/DocumentFormat.OpenXml.Framework.dll",
         "lib/netstandard2.0/DocumentFormat.OpenXml.Framework.xml"
+      ]
+    },
+    "ExcelNumberFormat/1.1.0": {
+      "sha512": "R3BVHPs9O+RkExbZYTGT0+9HLbi8ZrNij1Yziyw6znd3J7P3uoIR07uwTLGOogtz1p6+0sna66eBoXu7tBiVQA==",
+      "type": "package",
+      "path": "excelnumberformat/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "excelnumberformat.1.1.0.nupkg.sha512",
+        "excelnumberformat.nuspec",
+        "icon.png",
+        "lib/net20/ExcelNumberFormat.dll",
+        "lib/net20/ExcelNumberFormat.xml",
+        "lib/netstandard1.0/ExcelNumberFormat.dll",
+        "lib/netstandard1.0/ExcelNumberFormat.xml",
+        "lib/netstandard2.0/ExcelNumberFormat.dll",
+        "lib/netstandard2.0/ExcelNumberFormat.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1377,6 +1503,24 @@
         "version.txt"
       ]
     },
+    "RBush/3.2.0": {
+      "sha512": "ijGh9N0zZ7JfXk3oQkWCwK8SwSSByexbyh/MjbCjNxOft9eG5ZqKC1vdgiYq78h4IZRFmN4s3JZ/b10Jipud5w==",
+      "type": "package",
+      "path": "rbush/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/RBush.dll",
+        "lib/net6.0/RBush.xml",
+        "lib/netcoreapp3.1/RBush.dll",
+        "lib/netcoreapp3.1/RBush.xml",
+        "lib/netstandard1.2/RBush.dll",
+        "lib/netstandard1.2/RBush.xml",
+        "rbush.3.2.0.nupkg.sha512",
+        "rbush.nuspec",
+        "readme.md"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "sha512": "9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
       "type": "package",
@@ -1438,6 +1582,24 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SixLabors.Fonts/1.0.0": {
+      "sha512": "LFQsCZlV0xlUyXAOMUo5kkSl+8zAQXXbbdwWchtk0B4o7zotZhQsQOcJUELGHdfPfm/xDAsz6hONAuV25bJaAg==",
+      "type": "package",
+      "path": "sixlabors.fonts/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/SixLabors.Fonts.dll",
+        "lib/netcoreapp3.1/SixLabors.Fonts.xml",
+        "lib/netstandard2.0/SixLabors.Fonts.dll",
+        "lib/netstandard2.0/SixLabors.Fonts.xml",
+        "lib/netstandard2.1/SixLabors.Fonts.dll",
+        "lib/netstandard2.1/SixLabors.Fonts.xml",
+        "sixlabors.fonts.1.0.0.nupkg.sha512",
+        "sixlabors.fonts.128.png",
+        "sixlabors.fonts.nuspec"
       ]
     },
     "System.ClientModel/1.0.0": {
@@ -2309,23 +2471,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\school\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Final_Project\\Login\\Login.csproj",
+      "projectUniqueName": "F:\\final\\Final_Project\\Login\\Login.csproj",
       "projectName": "Login",
-      "projectPath": "E:\\Projects\\Final_Project\\Login\\Login.csproj",
-      "packagesPath": "C:\\Users\\school\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Final_Project\\Login\\obj\\",
+      "projectPath": "F:\\final\\Final_Project\\Login\\Login.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "F:\\final\\Final_Project\\Login\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\school\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2341,11 +2503,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "E:\\Projects\\Final_Project\\datahold\\datahold.csproj": {
-              "projectPath": "E:\\Projects\\Final_Project\\datahold\\datahold.csproj"
+            "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
+              "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj"
             },
-            "E:\\Projects\\Final_Project\\Final_Project\\Final_Project.csproj": {
-              "projectPath": "E:\\Projects\\Final_Project\\Final_Project\\Final_Project.csproj"
+            "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {
+              "projectPath": "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj"
             }
           }
         }

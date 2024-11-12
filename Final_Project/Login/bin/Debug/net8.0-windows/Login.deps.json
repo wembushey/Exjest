@@ -52,6 +52,30 @@
           }
         }
       },
+      "ClosedXML/0.104.1": {
+        "dependencies": {
+          "ClosedXML.Parser": "1.2.0",
+          "DocumentFormat.OpenXml": "3.1.1",
+          "ExcelNumberFormat": "1.1.0",
+          "RBush": "3.2.0",
+          "SixLabors.Fonts": "1.0.0",
+          "System.IO.Packaging": "8.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.dll": {
+            "assemblyVersion": "0.104.1.0",
+            "fileVersion": "0.104.1.0"
+          }
+        }
+      },
+      "ClosedXML.Parser/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.Parser.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.1.1": {
         "dependencies": {
           "DocumentFormat.OpenXml.Framework": "3.1.1"
@@ -71,6 +95,14 @@
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "assemblyVersion": "3.1.1.0",
             "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "ExcelNumberFormat/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/ExcelNumberFormat.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -281,6 +313,14 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
+      "RBush/3.2.0": {
+        "runtime": {
+          "lib/net6.0/RBush.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -312,6 +352,14 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "SixLabors.Fonts/1.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -455,6 +503,7 @@
       },
       "Excel_Import/1.0.0": {
         "dependencies": {
+          "ClosedXML": "0.104.1",
           "DocumentFormat.OpenXml": "3.1.1",
           "Microsoft.Data.SqlClient": "5.2.2",
           "datahold": "1.0.0"
@@ -500,6 +549,20 @@
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
+    "ClosedXML/0.104.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RVm2fUNWJlBJlg07shrfeWzrHPG5ypI/vARqdUOUbUdaog8yBw8l4IbCHf2MXt0AXtzaZqGNqhFaCAHigCBdfw==",
+      "path": "closedxml/0.104.1",
+      "hashPath": "closedxml.0.104.1.nupkg.sha512"
+    },
+    "ClosedXML.Parser/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w+/0tsxABS3lkSH8EUlA7IGme+mq5T/Puf3DbOiTckmSuUpAUO2LK29oXYByCcWkBv6wcRHxgWlQb1lxkwI0Tw==",
+      "path": "closedxml.parser/1.2.0",
+      "hashPath": "closedxml.parser.1.2.0.nupkg.sha512"
+    },
     "DocumentFormat.OpenXml/3.1.1": {
       "type": "package",
       "serviceable": true,
@@ -513,6 +576,13 @@
       "sha512": "sha512-6APEp/ElZV58S/4v8mf4Ke3ONEDORs64MqdD64Z7wWpcHANB9oovQsGIwtqjnKihulOj7T0a6IxHIHOfMqKOng==",
       "path": "documentformat.openxml.framework/3.1.1",
       "hashPath": "documentformat.openxml.framework.3.1.1.nupkg.sha512"
+    },
+    "ExcelNumberFormat/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R3BVHPs9O+RkExbZYTGT0+9HLbi8ZrNij1Yziyw6znd3J7P3uoIR07uwTLGOogtz1p6+0sna66eBoXu7tBiVQA==",
+      "path": "excelnumberformat/1.1.0",
+      "hashPath": "excelnumberformat.1.1.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -626,6 +696,13 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
+    "RBush/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ijGh9N0zZ7JfXk3oQkWCwK8SwSSByexbyh/MjbCjNxOft9eG5ZqKC1vdgiYq78h4IZRFmN4s3JZ/b10Jipud5w==",
+      "path": "rbush/3.2.0",
+      "hashPath": "rbush.3.2.0.nupkg.sha512"
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -653,6 +730,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SixLabors.Fonts/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LFQsCZlV0xlUyXAOMUo5kkSl+8zAQXXbbdwWchtk0B4o7zotZhQsQOcJUELGHdfPfm/xDAsz6hONAuV25bJaAg==",
+      "path": "sixlabors.fonts/1.0.0",
+      "hashPath": "sixlabors.fonts.1.0.0.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

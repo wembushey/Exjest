@@ -2,12 +2,11 @@ using System;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.Data.SqlClient;
-using System.IO;
 using System.Data;
 using datahold;
+using System.IO;
+using ClosedXML.Excel;
 
 namespace Excel_Import
 {
@@ -47,155 +46,87 @@ namespace Excel_Import
 
         private void ImportExcelData(string filePath)
         {
-            using (SpreadsheetDocument doc = SpreadsheetDocument.Open(filePath, false))
+            using (XLWorkbook workbook = new XLWorkbook(filePath))
+            using (SqlConnection connection = new SqlConnection(Config.GetConnectionString()))
             {
-                WorkbookPart workbookPart = doc.WorkbookPart;
-                var sheets = workbookPart.Workbook.Sheets.Elements<Sheet>();
+                connection.Open();
 
-                using (SqlConnection connection = new SqlConnection(Config.GetConnectionString()))
+                foreach (IXLWorksheet worksheet in workbook.Worksheets)
                 {
-                    connection.Open();
+                    // Convert worksheet name to lowercase for compatibility
+                    string tableName = worksheet.Name.ToLower();
+                    var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
 
-                    foreach (var sheet in sheets)
+                    // Ensure table exists in the database
+                    EnsureTableExists(tableName, headers, connection);
+
+                    foreach (IXLRow row in worksheet.RowsUsed().Skip(1))
                     {
-                        string tableName = sheet.Name;
-                        WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(sheet.Id);
-                        SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+                        List<object> values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
+                        InsertRow(tableName, headers, values, connection);
+                    }
+                }
+            }
 
-                        var headerRow = sheetData.Elements<Row>().FirstOrDefault();
-                        var columns = headerRow.Elements<Cell>().Select(cell => GetCellValue(cell, workbookPart)).ToList();
+            // Close the form once the import is complete :)
+            this.Close();
+        }
 
-                        CreateTableIfNotExist(tableName, columns, connection);
+        private void EnsureTableExists(string tableName, List<string> columns, SqlConnection connection)
+        {
+            // Query to check if the table exists in the database
+            string checkTableQuery = $"SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = @TableName";
 
-                        foreach (Row row in sheetData.Elements<Row>().Skip(1))
-                        {
-                            var cellValues = row.Elements<Cell>()
-                                                 .Select(cell => GetCellValue(cell, workbookPart))
-                                                 .ToList();
+            using (SqlCommand checkCommand = new SqlCommand(checkTableQuery, connection))
+            {
+                checkCommand.Parameters.AddWithValue("@TableName", tableName);
 
-                            // Log cell values for debugging
-                            Console.WriteLine("Inserting row for table: " + tableName);
-                            for (int i = 0; i < cellValues.Count; i++)
-                            {
-                                Console.WriteLine($"Column {columns[i]}: Value '{cellValues[i]}'");
-                            }
+                // If the table does not exist, create it
+                if ((int)checkCommand.ExecuteScalar() == 0)
+                {
+                    StringBuilder createTableQuery = new StringBuilder($"CREATE TABLE [{tableName}] (");
 
-                            InsertRow(tableName, connection, columns, cellValues);
-                        }
+                    // Define each column as NVARCHAR(MAX) by default for simplicity and compatability with wierd data
+                    foreach (var column in columns)
+                    {
+                        createTableQuery.Append($"[{column}] NVARCHAR(MAX),");
+                    }
+
+                    createTableQuery.Length--;
+                    createTableQuery.Append(");");
+
+                    using (SqlCommand createCommand = new SqlCommand(createTableQuery.ToString(), connection))
+                    {
+                        createCommand.ExecuteNonQuery();
+                        Console.WriteLine($"Table '{tableName}' created successfully.");
                     }
                 }
             }
         }
 
-        private void CreateTableIfNotExist(string tableName, List<string> columns, SqlConnection connection)
+        private void InsertRow(string tableName, List<string> columns, List<object> values, SqlConnection connection)
         {
-            StringBuilder createTableQuery = new StringBuilder($"IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '{tableName}') CREATE TABLE {tableName} (");
-
-            foreach (var column in columns)
+            // Adjust length of values to match columns
+            while (values.Count < columns.Count)
             {
-                createTableQuery.Append($"[{column}] NVARCHAR(MAX),");
+                values.Add(DBNull.Value);  // Add null for missing values
             }
 
-            createTableQuery.Length--;  // Remove last comma
-            createTableQuery.Append(");");
+            var insertQuery = $@"
+                INSERT INTO [{tableName}]
+                ({string.Join(",", columns.Select(col => $"[{col}]"))}) 
+                VALUES ({string.Join(",", Enumerable.Range(0, columns.Count).Select(i => $"@Value{i}"))})";
 
-            using (SqlCommand command = new SqlCommand(createTableQuery.ToString(), connection))
+            using (SqlCommand command = new SqlCommand(insertQuery, connection))
             {
+                for (int i = 0; i < values.Count; i++)
+                {
+                    command.Parameters.AddWithValue($"@Value{i}", values[i] ?? DBNull.Value);
+                }
+
                 command.ExecuteNonQuery();
             }
         }
-
-        private void InsertRow(string tableName, SqlConnection connection, List<string> columns, List<string> cellValues)
-        {
-            // Ensure there are enough values for the columns
-            while (cellValues.Count < columns.Count)
-            {
-                cellValues.Add(null);  // Add null for missing values
-            }
-
-            // Log the number of columns and values for debugging
-            Console.WriteLine($"Columns: {columns.Count}, Values: {cellValues.Count}");
-
-            // Handle columns with 'NOT NULL' constraints
-            for (int i = 0; i < columns.Count; i++)
-            {
-                if (IsNotNullColumn(columns[i]) && string.IsNullOrEmpty(cellValues[i]?.ToString()))
-                {
-                    cellValues[i] = null;  // Keep it as null for now
-                    Console.WriteLine($"Default value for column {columns[i]}: {cellValues[i]}");
-                }
-            }
-
-            // Create the insert query
-            var sanitizedColumns = columns.Select(col => $"[{col}]").ToList();
-            var insertQuery = $@"
-INSERT INTO [{tableName}] 
-({string.Join(",", sanitizedColumns)}) 
-VALUES ({string.Join(",", Enumerable.Range(0, columns.Count).Select(i => $"@Value{i}"))})";
-
-            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
-            {
-                // Loop through cellValues and assign DBNull.Value for null or empty values
-                for (int i = 0; i < cellValues.Count; i++)
-                {
-                    // Use DBNull.Value for null fields, but leave strings as is
-                    var valueToInsert = cellValues[i] == null ? DBNull.Value : (object)cellValues[i];
-                    insertCommand.Parameters.AddWithValue($"@Value{i}", valueToInsert);
-                }
-
-                // Log the final SQL query and parameters
-                Console.WriteLine("SQL Query: " + insertQuery);
-                foreach (SqlParameter param in insertCommand.Parameters)
-                {
-                    Console.WriteLine($"{param.ParameterName}: {param.Value}");
-                }
-
-                // Execute the insert statement
-                insertCommand.ExecuteNonQuery();
-            }
-        }
-
-
-
-        private bool IsNotNullColumn(string columnName)
-        {
-            // Check if a column is marked as NOT NULL
-            // This can be done by querying the database schema or by predefined logic
-            // For this example, let's assume that 'columnName' is a non-nullable column if it matches specific criteria
-            return true; // Example condition; customize as needed
-        }
-
-        private string GetDefaultValueForColumn(string columnName)
-        {
-            // Return a default value for a non-nullable column (if needed)
-            // This could be a placeholder value or an empty string
-            return "";  // Example default value; customize as needed
-        }
-
-        private string GetCellValue(Cell cell, WorkbookPart workbookPart)
-        {
-            // Return empty string if the cell is empty
-            if (cell.CellValue == null || string.IsNullOrEmpty(cell.CellValue.Text))
-                return null;
-
-            string value = cell.CellValue.Text;
-
-            // Handle shared strings (i.e., text stored in a shared string table)
-            if (cell.DataType?.Value == CellValues.SharedString && workbookPart != null)
-            {
-                int index = int.Parse(value);
-                var sharedStringTable = workbookPart.SharedStringTablePart.SharedStringTable;
-                return sharedStringTable.Elements<SharedStringItem>().ElementAt(index).InnerText;
-            }
-
-            // Handle date values
-            if (DateTime.TryParse(value, out DateTime dateValue))
-            {
-                return dateValue.ToString("yyyy-MM-dd");
-            }
-
-            // Otherwise, return the raw string value
-            return value;
-        }
     }
 }
+
