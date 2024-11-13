@@ -34,3 +34,6 @@
 - Got the login page to load the main_page
 - Got the import page to be prompted when selected
 
+#### 11/10 - 11/12
+
+- Got the inporting function working

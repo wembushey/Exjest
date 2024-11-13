@@ -12,12 +12,20 @@ namespace Excel_Import
 {
     public partial class ImportForm : Form
     {
+        // Keep track of the total number of rows and processed rows
+        // This is for the loading bar
+        private int rowsProcessed = 0;
+        private int totalRows = 0;
+             
         public ImportForm()
         {
             InitializeComponent();
             this.AllowDrop = true;
             this.DragEnter += new DragEventHandler(ImportForm_DragEnter);
             this.DragDrop += new DragEventHandler(ImportForm_DragDrop);
+
+            // Initialize ProgressBar (Hidden until process starts)
+            progressBar1.Visible = false;
         }
 
         private void ImportForm_DragEnter(object sender, DragEventArgs e)
@@ -51,42 +59,53 @@ namespace Excel_Import
             {
                 connection.Open();
 
+                // Calculate the total number of rows to import
+                totalRows = workbook.Worksheets.Sum(ws => ws.RowsUsed().Count() - 1); // -1 to exclude headers
+                progressBar1.Maximum = totalRows;
+                progressBar1.Value = 0;
+                progressBar1.Visible = true;
+
                 foreach (IXLWorksheet worksheet in workbook.Worksheets)
                 {
-                    // Convert worksheet name to lowercase for compatibility
                     string tableName = worksheet.Name.ToLower();
                     var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
 
-                    // Ensure table exists in the database
                     EnsureTableExists(tableName, headers, connection);
 
-                    foreach (IXLRow row in worksheet.RowsUsed().Skip(1))
+                    int rowCount = 0;
+                    foreach (IXLRow row in worksheet.RowsUsed().Skip(1))  // Skip header row
                     {
                         List<object> values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
                         InsertRow(tableName, headers, values, connection);
+                        rowCount++;
+
+                        // Report progress after each row
+                        rowsProcessed++;
+                        progressBar1.Value = rowsProcessed;
+
+                        // Optional: Use Application.DoEvents() to keep UI responsive during long operations
+                        Application.DoEvents();
                     }
                 }
             }
 
-            // Close the form once the import is complete :)
+            // Show message once the import is complete
+            MessageBox.Show("Import Complete!");
             this.Close();
         }
 
         private void EnsureTableExists(string tableName, List<string> columns, SqlConnection connection)
         {
-            // Query to check if the table exists in the database
             string checkTableQuery = $"SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = @TableName";
 
             using (SqlCommand checkCommand = new SqlCommand(checkTableQuery, connection))
             {
                 checkCommand.Parameters.AddWithValue("@TableName", tableName);
 
-                // If the table does not exist, create it
                 if ((int)checkCommand.ExecuteScalar() == 0)
                 {
                     StringBuilder createTableQuery = new StringBuilder($"CREATE TABLE [{tableName}] (");
 
-                    // Define each column as NVARCHAR(MAX) by default for simplicity and compatability with wierd data
                     foreach (var column in columns)
                     {
                         createTableQuery.Append($"[{column}] NVARCHAR(MAX),");
@@ -98,7 +117,7 @@ namespace Excel_Import
                     using (SqlCommand createCommand = new SqlCommand(createTableQuery.ToString(), connection))
                     {
                         createCommand.ExecuteNonQuery();
-                        Console.WriteLine($"Table '{tableName}' created successfully.");
+                        Console.WriteLine($"Table '{tableName}' created successfully :) ");
                     }
                 }
             }
@@ -106,7 +125,6 @@ namespace Excel_Import
 
         private void InsertRow(string tableName, List<string> columns, List<object> values, SqlConnection connection)
         {
-            // Adjust length of values to match columns
             while (values.Count < columns.Count)
             {
                 values.Add(DBNull.Value);  // Add null for missing values
@@ -129,4 +147,3 @@ namespace Excel_Import
         }
     }
 }
-

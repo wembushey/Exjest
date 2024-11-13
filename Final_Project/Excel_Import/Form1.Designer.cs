@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            progressBar1 = new ProgressBar();
             SuspendLayout();
             // 
             // label1
@@ -39,17 +40,25 @@
             label1.Size = new Size(82, 15);
             label1.TabIndex = 0;
             label1.Text = "Drop File Here";
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(12, 121);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(310, 12);
+            progressBar1.TabIndex = 1;
 
             // 
-            // Form1
+            // ImportForm
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(334, 145);
+            Controls.Add(progressBar1);
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
+            Name = "ImportForm";
             Text = "Import";
             ResumeLayout(false);
             PerformLayout();
@@ -58,5 +67,6 @@
         #endregion
 
         private Label label1;
+        private ProgressBar progressBar1;
     }
 }
