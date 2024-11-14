@@ -83,7 +83,7 @@ namespace Excel_Import
                         rowsProcessed++;
                         progressBar1.Value = rowsProcessed;
 
-                        // Optional: Use Application.DoEvents() to keep UI responsive during long operations
+                        
                         Application.DoEvents();
                     }
                 }
