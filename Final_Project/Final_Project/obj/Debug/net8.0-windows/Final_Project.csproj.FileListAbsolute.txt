@@ -247,3 +247,6 @@ E:\Projects\Final_Project\Final_Project\bin\Debug\net8.0-windows\UserControl.pdb
 E:\Projects\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.dll.config
 E:\Projects\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.dll.config
 E:\Projects\Final_Project\Final_Project\bin\Debug\net8.0-windows\UserControl.dll.config
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Final_Project.dll.config
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Excel_Import.dll.config
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\UserControl.dll.config

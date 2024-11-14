@@ -16,15 +16,7 @@ namespace Login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Test connection string when the form is loaded
-            if (IsConnectionStringValid())
-            {
-                MessageBox.Show("Connection string is valid.");
-            }
-            else
-            {
-                MessageBox.Show("Connection string is invalid.");
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,26 +37,34 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Get values from the textboxes
+            // Get values from the textboxes (user credentials)
             string username = textBox1.Text;
             string password = textBox2.Text;
 
-            // Set values in Config class (this will persist in memory during runtime so that it will be lost when stopped)
+            // Set values in Config class (not strictly necessary for validation)
             Config.Username = username;
             Config.Password = password;
 
-            // Create a new SQL connection using the connection string
-            using (SqlConnection connection = new SqlConnection(Config.GetConnectionString()))
+            // Get the connection string from app.config for connecting to the database
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                MessageBox.Show("Connection string is missing or invalid in app.config.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Create a new SQL connection using the connection string from app.config
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     // Open the database connection
                     connection.Open();
 
-                    // Check if the account exists and the password is correct
+                    // Check if the account exists and the password is correct by querying the database
                     bool isAccountValid = CheckAccountCredentials(connection, username, password);
 
-                    // If the account is valid, proceed to the next form
                     if (isAccountValid)
                     {
                         Main_Page finalProjectForm = new Main_Page();
@@ -73,7 +73,6 @@ namespace Login
                     }
                     else
                     {
-                        // Show an error message if the username or password is incorrect
                         MessageBox.Show("Invalid username or password.");
                     }
                 }
@@ -94,11 +93,11 @@ namespace Login
             // Create a new SQL command using the query and connection
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                // Add parameters to prevent SQL injection
+                // Use the user input credentials here
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password);
 
-                // Execute the query and get the result (count of matching rows)
+                // Execute the query and get the result
                 int result = Convert.ToInt32(command.ExecuteScalar());
 
                 // Return true if a matching row was found, else false

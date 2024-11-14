@@ -297,3 +297,7 @@ E:\Projects\Final_Project\Login\bin\Debug\net8.0-windows\Login.dll.config
 E:\Projects\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.dll.config
 E:\Projects\Final_Project\Login\bin\Debug\net8.0-windows\Excel_Import.dll.config
 E:\Projects\Final_Project\Login\bin\Debug\net8.0-windows\UserControl.dll.config
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Login.dll.config
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.dll.config
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Excel_Import.dll.config
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\UserControl.dll.config

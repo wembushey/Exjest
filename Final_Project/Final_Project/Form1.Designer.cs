@@ -36,16 +36,20 @@
             addUserToolStripMenuItem = new ToolStripMenuItem();
             removeUserToolStripMenuItem = new ToolStripMenuItem();
             modifyUserToolStripMenuItem = new ToolStripMenuItem();
+            dataViewsToolStripMenuItem = new ToolStripMenuItem();
+            incidentsToolStripMenuItem = new ToolStripMenuItem();
+            companiesToolStripMenuItem = new ToolStripMenuItem();
+            railroadsToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.Control;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, importToolStripMenuItem, usersToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, importToolStripMenuItem, usersToolStripMenuItem, dataViewsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(1035, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -100,12 +104,38 @@
             modifyUserToolStripMenuItem.Text = "Modify User";
             modifyUserToolStripMenuItem.Click += modifyUserToolStripMenuItem_Click;
             // 
+            // dataViewsToolStripMenuItem
+            // 
+            dataViewsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { incidentsToolStripMenuItem, companiesToolStripMenuItem, railroadsToolStripMenuItem });
+            dataViewsToolStripMenuItem.Name = "dataViewsToolStripMenuItem";
+            dataViewsToolStripMenuItem.Size = new Size(76, 20);
+            dataViewsToolStripMenuItem.Text = "Data Views";
+            // 
+            // incidentsToolStripMenuItem
+            // 
+            incidentsToolStripMenuItem.Name = "incidentsToolStripMenuItem";
+            incidentsToolStripMenuItem.Size = new Size(180, 22);
+            incidentsToolStripMenuItem.Text = "Incidents";
+            incidentsToolStripMenuItem.Click += incidentsToolStripMenuItem_Click;
+            // 
+            // companiesToolStripMenuItem
+            // 
+            companiesToolStripMenuItem.Name = "companiesToolStripMenuItem";
+            companiesToolStripMenuItem.Size = new Size(180, 22);
+            companiesToolStripMenuItem.Text = "Companies";
+            // 
+            // railroadsToolStripMenuItem
+            // 
+            railroadsToolStripMenuItem.Name = "railroadsToolStripMenuItem";
+            railroadsToolStripMenuItem.Size = new Size(180, 22);
+            railroadsToolStripMenuItem.Text = "Railroads";
+            // 
             // Main_Page
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.Window;
+            ClientSize = new Size(1035, 579);
             Controls.Add(menuStrip1);
             Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip1;
@@ -128,5 +158,9 @@
         private ToolStripMenuItem removeUserToolStripMenuItem;
         private ToolStripMenuItem modifyUserToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem dataViewsToolStripMenuItem;
+        private ToolStripMenuItem incidentsToolStripMenuItem;
+        private ToolStripMenuItem companiesToolStripMenuItem;
+        private ToolStripMenuItem railroadsToolStripMenuItem;
     }
 }

@@ -31,7 +31,7 @@ namespace Final_Project
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             // Create an instance of Form1 from the UserControl project
             Form1 form1 = new Form1();
 
@@ -52,6 +52,11 @@ namespace Final_Project
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void incidentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

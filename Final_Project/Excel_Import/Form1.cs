@@ -4,19 +4,18 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Data;
-using datahold;
 using System.IO;
 using ClosedXML.Excel;
+using System.Configuration;  // Required for reading from app.config
 
 namespace Excel_Import
 {
     public partial class ImportForm : Form
     {
-        // Keep track of the total number of rows and processed rows
-        // This is for the loading bar
+        // Track the total number of rows and processed rows for the loading bar
         private int rowsProcessed = 0;
         private int totalRows = 0;
-             
+
         public ImportForm()
         {
             InitializeComponent();
@@ -55,36 +54,44 @@ namespace Excel_Import
         private void ImportExcelData(string filePath)
         {
             using (XLWorkbook workbook = new XLWorkbook(filePath))
-            using (SqlConnection connection = new SqlConnection(Config.GetConnectionString()))
             {
-                connection.Open();
+                // Retrieve the connection string from app.config
+                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
 
-                // Calculate the total number of rows to import
-                totalRows = workbook.Worksheets.Sum(ws => ws.RowsUsed().Count() - 1); // -1 to exclude headers
-                progressBar1.Maximum = totalRows;
-                progressBar1.Value = 0;
-                progressBar1.Visible = true;
-
-                foreach (IXLWorksheet worksheet in workbook.Worksheets)
+                if (string.IsNullOrEmpty(connectionString))
                 {
-                    string tableName = worksheet.Name.ToLower();
-                    var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
+                    MessageBox.Show("Connection string is missing or invalid in app.config.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    EnsureTableExists(tableName, headers, connection);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                    int rowCount = 0;
-                    foreach (IXLRow row in worksheet.RowsUsed().Skip(1))  // Skip header row
+                    // Calculate the total number of rows to import
+                    totalRows = workbook.Worksheets.Sum(ws => ws.RowsUsed().Count() - 1); // -1 to exclude headers
+                    progressBar1.Maximum = totalRows;
+                    progressBar1.Value = 0;
+                    progressBar1.Visible = true;
+
+                    foreach (IXLWorksheet worksheet in workbook.Worksheets)
                     {
-                        List<object> values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
-                        InsertRow(tableName, headers, values, connection);
-                        rowCount++;
+                        string tableName = worksheet.Name.ToLower();
+                        var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
 
-                        // Report progress after each row
-                        rowsProcessed++;
-                        progressBar1.Value = rowsProcessed;
+                        EnsureTableExists(tableName, headers, connection);
 
-                        
-                        Application.DoEvents();
+                        foreach (IXLRow row in worksheet.RowsUsed().Skip(1))  // Skip header row
+                        {
+                            List<object> values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
+                            InsertRow(tableName, headers, values, connection);
+
+                            // Update progress bar after each row
+                            rowsProcessed++;
+                            progressBar1.Value = rowsProcessed;
+
+                            Application.DoEvents();
+                        }
                     }
                 }
             }
