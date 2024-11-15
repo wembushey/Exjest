@@ -1,6 +1,8 @@
 using System;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 using datahold;
 using Final_Project;
@@ -16,17 +18,17 @@ namespace Login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            // username label click
+            // Username label click
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // username box logic
+            // Username box logic
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace Login
             string username = textBox1.Text;
             string password = textBox2.Text;
 
-            // Set values in Config class (not strictly necessary for validation)
+            // Set values in Config class (optional, can be used elsewhere in the program)
             Config.Username = username;
             Config.Password = password;
 
@@ -87,25 +89,48 @@ namespace Login
         // Method to check if the username and password match in the database
         private bool CheckAccountCredentials(SqlConnection connection, string username, string password)
         {
-            // Define the SQL query to check if the username and password match
-            string query = "SELECT COUNT(1) FROM Users WHERE name = @Username AND password = @Password";
+            // SQL query to retrieve the hashed password and salt for the given username
+            string query = "SELECT password, salt FROM Users WHERE name = @Username";
 
-            // Create a new SQL command using the query and connection
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                // Use the user input credentials here
                 command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@Password", password);
 
-                // Execute the query and get the result
-                int result = Convert.ToInt32(command.ExecuteScalar());
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Retrieve the stored hashed password and salt
+                        string storedHashedPassword = reader["password"].ToString();
+                        string salt = reader["salt"].ToString();
 
-                // Return true if a matching row was found, else false
-                return result > 0;
+                        // Hash the entered password with the retrieved salt
+                        string hashedPassword = HashPassword(password, salt);
+
+                        // Compare the hashed password with the stored hashed password
+                        return hashedPassword == storedHashedPassword;
+                    }
+                    else
+                    {
+                        // No matching username found
+                        return false;
+                    }
+                }
             }
         }
 
-        // Method to check if the connection string is valid
+        // Method to hash the password with the salt
+        private string HashPassword(string password, string salt)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] saltedPassword = Encoding.UTF8.GetBytes(password + salt);
+                byte[] hashBytes = sha256.ComputeHash(saltedPassword);
+                return Convert.ToBase64String(hashBytes);
+            }
+        }
+
+        // Method to check if the connection string is valid (unchanged)
         private bool IsConnectionStringValid()
         {
             try
