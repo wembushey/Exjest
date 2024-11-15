@@ -41,7 +41,8 @@ namespace Final_Project
 
         private void removeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
 
         private void modifyUserToolStripMenuItem_Click(object sender, EventArgs e)
