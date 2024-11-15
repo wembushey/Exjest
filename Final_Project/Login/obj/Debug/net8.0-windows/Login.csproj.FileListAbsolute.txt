@@ -249,8 +249,6 @@ F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-x86\native\Mi
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\datahold.dll
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Excel_Import.dll
@@ -301,3 +299,5 @@ F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Login.dll.config
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Final_Project.dll.config
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Excel_Import.dll.config
 F:\final\Final_Project\Login\bin\Debug\net8.0-windows\UserControl.dll.config
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll

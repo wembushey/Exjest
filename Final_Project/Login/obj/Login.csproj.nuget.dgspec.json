@@ -298,7 +298,7 @@
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.6, )"
+              "version": "[4.9.0, )"
             }
           },
           "imports": [
@@ -369,6 +369,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

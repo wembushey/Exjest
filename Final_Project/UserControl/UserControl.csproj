@@ -12,4 +12,8 @@
     <None Include="..\Login\App.config" Link="App.config" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
 </Project>
