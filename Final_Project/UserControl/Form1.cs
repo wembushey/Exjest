@@ -36,8 +36,10 @@ namespace UserControl
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            textBox1.PasswordChar = '*';
             // Password textbox logic (if any)
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

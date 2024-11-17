@@ -72,7 +72,7 @@
             // xlsxToolStripMenuItem
             // 
             xlsxToolStripMenuItem.Name = "xlsxToolStripMenuItem";
-            xlsxToolStripMenuItem.Size = new Size(180, 22);
+            xlsxToolStripMenuItem.Size = new Size(97, 22);
             xlsxToolStripMenuItem.Text = ".xlsx";
             xlsxToolStripMenuItem.Click += xlsxToolStripMenuItem_Click;
             // 
@@ -101,7 +101,7 @@
             // 
             modifyUserToolStripMenuItem.Name = "modifyUserToolStripMenuItem";
             modifyUserToolStripMenuItem.Size = new Size(180, 22);
-            modifyUserToolStripMenuItem.Text = "Modify User";
+            modifyUserToolStripMenuItem.Text = "Change Password";
             modifyUserToolStripMenuItem.Click += modifyUserToolStripMenuItem_Click;
             // 
             // dataViewsToolStripMenuItem
@@ -114,20 +114,20 @@
             // incidentsToolStripMenuItem
             // 
             incidentsToolStripMenuItem.Name = "incidentsToolStripMenuItem";
-            incidentsToolStripMenuItem.Size = new Size(180, 22);
+            incidentsToolStripMenuItem.Size = new Size(134, 22);
             incidentsToolStripMenuItem.Text = "Incidents";
             incidentsToolStripMenuItem.Click += incidentsToolStripMenuItem_Click;
             // 
             // companiesToolStripMenuItem
             // 
             companiesToolStripMenuItem.Name = "companiesToolStripMenuItem";
-            companiesToolStripMenuItem.Size = new Size(180, 22);
+            companiesToolStripMenuItem.Size = new Size(134, 22);
             companiesToolStripMenuItem.Text = "Companies";
             // 
             // railroadsToolStripMenuItem
             // 
             railroadsToolStripMenuItem.Name = "railroadsToolStripMenuItem";
-            railroadsToolStripMenuItem.Size = new Size(180, 22);
+            railroadsToolStripMenuItem.Size = new Size(134, 22);
             railroadsToolStripMenuItem.Text = "Railroads";
             // 
             // Main_Page
