@@ -30,34 +30,55 @@
         {
             label1 = new Label();
             progressBar1 = new ProgressBar();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(129, 54);
+            label1.Location = new Point(142, 44);
             label1.Name = "label1";
-            label1.Size = new Size(82, 15);
+            label1.Size = new Size(101, 20);
             label1.TabIndex = 0;
-            label1.Text = "Drop File Here";
+            label1.Text = "Drop file here";
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(12, 121);
+            progressBar1.Location = new Point(14, 161);
+            progressBar1.Margin = new Padding(3, 4, 3, 4);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(310, 12);
+            progressBar1.Size = new Size(354, 16);
             progressBar1.TabIndex = 1;
-
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(32, 79);
+            label2.Name = "label2";
+            label2.Size = new Size(312, 20);
+            label2.TabIndex = 2;
+            label2.Text = "This page will close after the data is imported";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(221, 139);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 3;
+            label3.Text = "label3";
             // 
             // ImportForm
             // 
             AllowDrop = true;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 145);
+            ClientSize = new Size(382, 193);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(progressBar1);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ImportForm";
             Text = "Import";
             ResumeLayout(false);
@@ -68,5 +89,7 @@
 
         private Label label1;
         private ProgressBar progressBar1;
+        private Label label2;
+        private Label label3;
     }
 }

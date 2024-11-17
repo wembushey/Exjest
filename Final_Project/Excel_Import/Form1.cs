@@ -6,13 +6,12 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using System.IO;
 using ClosedXML.Excel;
-using System.Configuration;  // Required for reading from app.config
+using System.Configuration;
 
 namespace Excel_Import
 {
     public partial class ImportForm : Form
     {
-        // Track the total number of rows and processed rows for the loading bar
         private int rowsProcessed = 0;
         private int totalRows = 0;
 
@@ -20,10 +19,8 @@ namespace Excel_Import
         {
             InitializeComponent();
             this.AllowDrop = true;
-            this.DragEnter += new DragEventHandler(ImportForm_DragEnter);
-            this.DragDrop += new DragEventHandler(ImportForm_DragDrop);
-
-            // Initialize ProgressBar (Hidden until process starts)
+            this.DragEnter += ImportForm_DragEnter;
+            this.DragDrop += ImportForm_DragDrop;
             progressBar1.Visible = false;
         }
 
@@ -32,10 +29,9 @@ namespace Excel_Import
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                if (files.Length > 0 && Path.GetExtension(files[0]).Equals(".xlsx", StringComparison.OrdinalIgnoreCase))
-                    e.Effect = DragDropEffects.Copy;
-                else
-                    e.Effect = DragDropEffects.None;
+                e.Effect = files.Any(file => Path.GetExtension(file).Equals(".xlsx", StringComparison.OrdinalIgnoreCase))
+                    ? DragDropEffects.Copy
+                    : DragDropEffects.None;
             }
         }
 
@@ -49,100 +45,101 @@ namespace Excel_Import
                     ImportExcelData(filePath);
                 }
             }
+
+            // Close the form after processing all files
+            this.Close();
         }
 
         private void ImportExcelData(string filePath)
         {
-            using (XLWorkbook workbook = new XLWorkbook(filePath))
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connectionString))
             {
-                // Retrieve the connection string from app.config
-                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
+                Console.WriteLine("Connection string is missing or invalid in app.config.");
+                return;
+            }
 
-                if (string.IsNullOrEmpty(connectionString))
+            using (XLWorkbook workbook = new XLWorkbook(filePath))
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                totalRows = workbook.Worksheets.Sum(ws => ws.RowsUsed().Count() - 1); // Exclude header rows
+                progressBar1.Maximum = totalRows;
+                progressBar1.Value = 0;
+                progressBar1.Visible = true;
+
+                foreach (IXLWorksheet worksheet in workbook.Worksheets)
                 {
-                    MessageBox.Show("Connection string is missing or invalid in app.config.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    string tableName = worksheet.Name.ToLower();
+                    var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    // Calculate the total number of rows to import
-                    totalRows = workbook.Worksheets.Sum(ws => ws.RowsUsed().Count() - 1); // -1 to exclude headers
-                    progressBar1.Maximum = totalRows;
-                    progressBar1.Value = 0;
-                    progressBar1.Visible = true;
-
-                    foreach (IXLWorksheet worksheet in workbook.Worksheets)
+                    // Skip this worksheet if the table already exists
+                    if (TableExists(tableName, connection))
                     {
-                        string tableName = worksheet.Name.ToLower();
-                        var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString()).ToList();
+                        Console.WriteLine($"Skipping worksheet '{tableName}' as the table already exists.");
+                        continue;
+                    }
 
-                        EnsureTableExists(tableName, headers, connection);
+                    CreateTable(tableName, headers, connection);
 
-                        foreach (IXLRow row in worksheet.RowsUsed().Skip(1))  // Skip header row
-                        {
-                            List<object> values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
-                            InsertRow(tableName, headers, values, connection);
+                    foreach (IXLRow row in worksheet.RowsUsed().Skip(1)) // Skip header row
+                    {
+                        var values = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString()).ToList();
+                        InsertRow(tableName, headers, values, connection);
 
-                            // Update progress bar after each row
-                            rowsProcessed++;
-                            progressBar1.Value = rowsProcessed;
-
-                            Application.DoEvents();
-                        }
+                        rowsProcessed++;
+                        progressBar1.Value = rowsProcessed;
+                        Application.DoEvents();
                     }
                 }
             }
-
-            // Show message once the import is complete
-            MessageBox.Show("Import Complete!");
-            this.Close();
         }
 
-        private void EnsureTableExists(string tableName, List<string> columns, SqlConnection connection)
+        private bool TableExists(string tableName, SqlConnection connection)
         {
-            string checkTableQuery = $"SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = @TableName";
-
-            using (SqlCommand checkCommand = new SqlCommand(checkTableQuery, connection))
+            string query = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = @TableName";
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
-                checkCommand.Parameters.AddWithValue("@TableName", tableName);
+                command.Parameters.AddWithValue("@TableName", tableName);
+                return (int)command.ExecuteScalar() > 0;
+            }
+        }
 
-                if ((int)checkCommand.ExecuteScalar() == 0)
-                {
-                    StringBuilder createTableQuery = new StringBuilder($"CREATE TABLE [{tableName}] (");
+        private void CreateTable(string tableName, List<string> columns, SqlConnection connection)
+        {
+            StringBuilder query = new StringBuilder($"CREATE TABLE [{tableName}] (");
 
-                    foreach (var column in columns)
-                    {
-                        createTableQuery.Append($"[{column}] NVARCHAR(MAX),");
-                    }
+            foreach (string column in columns)
+            {
+                query.Append($"[{column}] NVARCHAR(MAX),");
+            }
 
-                    createTableQuery.Length--;
-                    createTableQuery.Append(");");
+            query.Length--; // Remove trailing comma
+            query.Append(");");
 
-                    using (SqlCommand createCommand = new SqlCommand(createTableQuery.ToString(), connection))
-                    {
-                        createCommand.ExecuteNonQuery();
-                        Console.WriteLine($"Table '{tableName}' created successfully :) ");
-                    }
-                }
+            using (SqlCommand command = new SqlCommand(query.ToString(), connection))
+            {
+                command.ExecuteNonQuery();
+                Console.WriteLine($"Table '{tableName}' created successfully.");
             }
         }
 
         private void InsertRow(string tableName, List<string> columns, List<object> values, SqlConnection connection)
         {
+            // Ensure all columns have corresponding values
             while (values.Count < columns.Count)
             {
-                values.Add(DBNull.Value);  // Add null for missing values
+                values.Add(DBNull.Value);
             }
 
-            var insertQuery = $@"
+            string query = $@"
                 INSERT INTO [{tableName}]
                 ({string.Join(",", columns.Select(col => $"[{col}]"))}) 
-                VALUES ({string.Join(",", Enumerable.Range(0, columns.Count).Select(i => $"@Value{i}"))})";
+                VALUES ({string.Join(",", columns.Select((_, i) => $"@Value{i}"))})";
 
-            using (SqlCommand command = new SqlCommand(insertQuery, connection))
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
                 for (int i = 0; i < values.Count; i++)
                 {
