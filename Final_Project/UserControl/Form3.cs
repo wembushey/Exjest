@@ -14,10 +14,12 @@ namespace UserControl
             InitializeComponent();
         }
 
+        // Use the connection string from app.config
         string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Get the username and new password from the existing textboxes
             string username = textBox1.Text.Trim();
             string newPassword = textBox3.Text;
 
@@ -27,46 +29,32 @@ namespace UserControl
                 return;
             }
 
+            // Generate a new salt and hash the new password
+            string newSalt = GenerateSalt();
+            string hashedPassword = HashPassword(newPassword, newSalt);
+
+            // Update the user's password and salt in the database
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
+                    string query = "UPDATE Users SET password = @Password, salt = @Salt WHERE name = @Username";
 
-                    // Generate new salt and hash the new password
-                    string newSalt = GenerateSalt();
-                    string hashedPassword = HashPassword(newPassword, newSalt);
-
-                    // Delete old row and reinsert with new credentials
-                    using (var transaction = connection.BeginTransaction())
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        try
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", hashedPassword);
+                        command.Parameters.AddWithValue("@Salt", newSalt);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
                         {
-                            // Delete old record
-                            string deleteQuery = "DELETE FROM Users WHERE name = @Username";
-                            using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection, transaction))
-                            {
-                                deleteCommand.Parameters.AddWithValue("@Username", username);
-                                deleteCommand.ExecuteNonQuery();
-                            }
-
-                            // Insert new record
-                            string insertQuery = "INSERT INTO Users (name, password, salt) VALUES (@Username, @Password, @Salt)";
-                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection, transaction))
-                            {
-                                insertCommand.Parameters.AddWithValue("@Username", username);
-                                insertCommand.Parameters.AddWithValue("@Password", hashedPassword);
-                                insertCommand.Parameters.AddWithValue("@Salt", newSalt);
-                                insertCommand.ExecuteNonQuery();
-                            }
-
-                            transaction.Commit();
-                            MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Password reset successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch
+                        else
                         {
-                            transaction.Rollback();
-                            throw;
+                            MessageBox.Show("Username not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -74,16 +62,6 @@ namespace UserControl
                 {
                     MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-        }
-
-        private string HashPassword(string password, string salt)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] saltedPassword = Encoding.UTF8.GetBytes(salt + password); // Ensure same order
-                byte[] hashBytes = sha256.ComputeHash(saltedPassword);
-                return Convert.ToBase64String(hashBytes);
             }
         }
 
@@ -97,18 +75,29 @@ namespace UserControl
             return Convert.ToBase64String(saltBytes);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private string HashPassword(string password, string salt)
         {
-            // Logic for when the text changes, if necessary
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            // Logic for when the text changes, if necessary
-        }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            // Logic for when the text changes, if necessary
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] saltedPassword = Encoding.UTF8.GetBytes(password + salt);
+                byte[] hashBytes = sha256.ComputeHash(saltedPassword);
+                return Convert.ToBase64String(hashBytes);
+            }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Existing logic for username textbox, if any
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            // Existing logic for second textbox, if any
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.PasswordChar = '*';
+        }
     }
 }
