@@ -2335,23 +2335,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Wayne\\.nuget\\packages\\": {},
+    "C:\\Users\\school\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
+      "projectUniqueName": "E:\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
       "projectName": "Final_Project",
-      "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
-      "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\obj\\",
+      "projectPath": "E:\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
+      "packagesPath": "C:\\Users\\school\\.nuget\\packages\\",
+      "outputPath": "E:\\final\\Final_Project\\Final_Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\school\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2367,14 +2367,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj": {
-              "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj"
+            "E:\\final\\Final_Project\\datahold\\datahold.csproj": {
+              "projectPath": "E:\\final\\Final_Project\\datahold\\datahold.csproj"
             },
-            "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
-              "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj"
+            "E:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
+              "projectPath": "E:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj"
             },
-            "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj": {
-              "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj"
+            "E:\\final\\Final_Project\\UserControl\\UserControl.csproj": {
+              "projectPath": "E:\\final\\Final_Project\\UserControl\\UserControl.csproj"
             }
           }
         }
