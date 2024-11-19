@@ -66,46 +66,46 @@ namespace Excel_Import
                         switch (worksheet.Name.ToUpperInvariant())
                         {
                             case "CALLS":
-                               
+
                                 InsertDataIntoIncidentTable(data, connection);
                                 UpdateCompanyAndIncidentTables(data, connection);
                                 break;
 
                             case "COMPANIES":
-                                
+
                                 InsertDataIntoCompanyTable(data, connection);
                                 break;
 
                             case "RAILROADS":
-                               
+
                                 InsertDataIntoRailroadTable(data, connection);
                                 break;
 
                             case "INCIDENT_COMMONS":
-                               
+
                                 UpdateIncidentTableFromCommons(data, connection);
                                 break;
 
                             case "INCIDENT_DETAILS":
-                                
+
                                 UpdateIncidentTableFromDetails(data, connection);
                                 break;
 
                             case "TRAINS_DETAIL":
-                                
+
                                 UpdateRailroadAndIncidentTables(data, connection);
                                 UpdateTrainAndIncidentTables(data, connection);
                                 break;
 
                             case "DERAILED_UNITS":
-                                
+
                                 UpdateIncidentTrainCarTable(data, connection);
                                 break;
 
-                            
+
 
                             default:
-                               
+
                                 break;
                         }
                     }
@@ -165,7 +165,7 @@ namespace Excel_Import
                 catch (Exception ex)
                 {
                     //this is were a single exception is burried during runtime
-                    
+
                 }
             }
         }
@@ -362,7 +362,7 @@ namespace Excel_Import
                     object seqnos = GetSafeValue(derailedUnitsData, row, "SEQNOS");
                     if (seqnos == DBNull.Value || string.IsNullOrWhiteSpace(seqnos.ToString()))
                     {
-                  //  Message was here 
+                        //  Message was here 
                         continue;
                     }
 
@@ -373,7 +373,7 @@ namespace Excel_Import
                 WHERE seqnos = @seqnos";
 
                     // Show the SQL statement for debugging
-                    
+
 
                     object incidentTrainId = null;
                     using (SqlCommand fetchIncidentTrainCommand = new SqlCommand(fetchIncidentTrainQuery, connection))
@@ -401,7 +401,7 @@ namespace Excel_Import
                     OUTPUT INSERTED.train_id
                     VALUES (@name_number, @train_type)";
 
-                        
+
 
                         using (SqlCommand insertTrainCommand = new SqlCommand(insertTrainQuery, connection))
                         {
@@ -419,7 +419,7 @@ namespace Excel_Import
                         SET incident_train_id = @train_id
                         WHERE seqnos = @seqnos";
 
-                            
+
 
                             using (SqlCommand updateIncidentCommand = new SqlCommand(updateIncidentQuery, connection))
                             {
@@ -447,7 +447,7 @@ namespace Excel_Import
                         object carType = GetSafeValue(derailedUnitsData, row, "DERAILED_TYPE");
 
                         // Show the SQL statement for debugging
-                       
+
                         using (SqlCommand insertTrainCarCommand = new SqlCommand(insertTrainCarQuery, connection))
                         {
                             insertTrainCarCommand.Parameters.AddWithValue("@car_number", carNumber);
@@ -463,7 +463,7 @@ namespace Excel_Import
                 catch (Exception ex)
                 {
                     // Displaied a popup at one time
-                    
+
                 }
             }
         }
@@ -786,6 +786,11 @@ namespace Excel_Import
         private object GetSafeValue(DataTable data, DataRow row, string columnName)
         {
             return data.Columns.Contains(columnName) && row[columnName] != DBNull.Value ? row[columnName] : DBNull.Value;
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
