@@ -61,61 +61,58 @@ namespace Excel_Import
                 {
                     DataTable data = GetDataTableFromWorksheet(worksheet);
 
-                    if (worksheet.Name.Equals("CALLS", StringComparison.OrdinalIgnoreCase))
+                    try
                     {
-                        InsertDataIntoIncidentTable(data, connection);
+                        switch (worksheet.Name.ToUpperInvariant())
+                        {
+                            case "CALLS":
+                               
+                                InsertDataIntoIncidentTable(data, connection);
+                                UpdateCompanyAndIncidentTables(data, connection);
+                                break;
+
+                            case "COMPANIES":
+                                
+                                InsertDataIntoCompanyTable(data, connection);
+                                break;
+
+                            case "RAILROADS":
+                               
+                                InsertDataIntoRailroadTable(data, connection);
+                                break;
+
+                            case "INCIDENT_COMMONS":
+                               
+                                UpdateIncidentTableFromCommons(data, connection);
+                                break;
+
+                            case "INCIDENT_DETAILS":
+                                
+                                UpdateIncidentTableFromDetails(data, connection);
+                                break;
+
+                            case "TRAINS_DETAIL":
+                                
+                                UpdateRailroadAndIncidentTables(data, connection);
+                                UpdateTrainAndIncidentTables(data, connection);
+                                break;
+
+                            case "DERAILED_UNITS":
+                                
+                                UpdateIncidentTrainCarTable(data, connection);
+                                break;
+
+                            
+
+                            default:
+                               
+                                break;
+                        }
                     }
-
-
-
-
-                    /*
-                    else if (worksheet.Name.Equals("MOBILE_DETAILS", StringComparison.OrdinalIgnoreCase))
+                    catch (Exception ex)
                     {
-                        UpdateIncidentTableFromMobileDetails(data, connection);
+                        // droppd a message box
                     }
-                    */
-
-
-
-                    else if (worksheet.Name.Equals("COMPANIES", StringComparison.OrdinalIgnoreCase))
-                    {
-                        InsertDataIntoCompanyTable(data, connection);
-                    }
-                    else if (worksheet.Name.Equals("RAILROADS", StringComparison.OrdinalIgnoreCase))
-                    {
-                        InsertDataIntoRailroadTable(data, connection);
-                    }
-                    else if (worksheet.Name.Equals("INCIDENT_COMMONS", StringComparison.OrdinalIgnoreCase))
-                    {
-                        UpdateIncidentTableFromCommons(data, connection);
-                    }
-                    else if (worksheet.Name.Equals("INCIDENT_DETAILS", StringComparison.OrdinalIgnoreCase)) // New block
-                    {
-                        UpdateIncidentTableFromDetails(data, connection);
-                    }
-                    else if (worksheet.Name.Equals("TRAINS_DETAIL", StringComparison.OrdinalIgnoreCase))
-                    {
-                        UpdateRailroadAndIncidentTables(data, connection);
-                        UpdateTrainAndIncidentTables(data, connection);
-                        UpdateTrainCarAndIncidentTables(data, connection);
-                    }
-
-
-
-
-
-
-
-                    if (worksheet.Name.Equals("CALLS", StringComparison.OrdinalIgnoreCase))
-                    {
-                        InsertDataIntoIncidentTable(data, connection); // Existing function for incident data
-                        UpdateCompanyAndIncidentTables(data, connection); // New function for company and incident linking
-                    }
-
-
-
-
                 }
             }
 
@@ -124,6 +121,54 @@ namespace Excel_Import
         }
 
 
+        private void ProcessMaterialInvolvedData(DataTable data, SqlConnection connection)
+        {
+            foreach (DataRow row in data.Rows)
+            {
+                try
+                {
+                    // Validate SEQNOS and ensure it exists in the incident table
+                    string checkIncidentQuery = "SELECT COUNT(1) FROM incident WHERE seqnos = @seqnos";
+                    using (SqlCommand checkIncidentCommand = new SqlCommand(checkIncidentQuery, connection))
+                    {
+                        checkIncidentCommand.Parameters.AddWithValue("@seqnos", GetSafeValue(data, row, "SEQNOS"));
+                        int incidentExists = (int)checkIncidentCommand.ExecuteScalar();
+
+                        if (incidentExists == 0)
+                        {
+                            // was a message box
+                            continue;
+                        }
+                    }
+
+                    // Insert material details into the incident_train_car table
+                    string insertTrainCarQuery = @"
+                INSERT INTO incident_train_car (
+                    car_number, car_content, position_in_train, car_type, incident_train_id
+                )
+                VALUES (
+                    @car_number, @car_content, @position_in_train, @car_type, 
+                    (SELECT incident_train_id FROM incident WHERE seqnos = @seqnos)
+                )";
+
+                    using (SqlCommand insertCommand = new SqlCommand(insertTrainCarQuery, connection))
+                    {
+                        insertCommand.Parameters.AddWithValue("@seqnos", GetSafeValue(data, row, "SEQNOS"));
+                        insertCommand.Parameters.AddWithValue("@car_number", GetSafeValue(data, row, "UN_NUMBER"));
+                        insertCommand.Parameters.AddWithValue("@car_content", GetSafeValue(data, row, "NAME_OF_MATERIAL"));
+                        insertCommand.Parameters.AddWithValue("@position_in_train", DBNull.Value); // No position available
+                        insertCommand.Parameters.AddWithValue("@car_type", "MATERIAL"); // Mark as material
+
+                        insertCommand.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //this is were a single exception is burried during runtime
+                    
+                }
+            }
+        }
 
 
         private DataTable GetDataTableFromWorksheet(IXLWorksheet worksheet)
@@ -304,113 +349,121 @@ namespace Excel_Import
         }
 
 
-        /*
-        private void UpdateIncidentTableFromMobileDetails(DataTable mobileDetailsData, SqlConnection connection)
-        {
-            foreach (DataRow row in mobileDetailsData.Rows)
-            {
-                // Check if SEQNOS exists in the incident table
-                string fetchQuery = "SELECT incident_train_id FROM incident WHERE seqnos = @seqnos";
-                object existingTrainId = null;
-
-                using (SqlCommand fetchCommand = new SqlCommand(fetchQuery, connection))
-                {
-                    fetchCommand.Parameters.AddWithValue("@seqnos", GetSafeValue(mobileDetailsData, row, "SEQNOS"));
-                    existingTrainId = fetchCommand.ExecuteScalar();
-                }
-
-                // Skip updating if the incident_train_id already exists
-                if (existingTrainId != null && existingTrainId != DBNull.Value)
-                {
-                    continue;
-                }
-
-                // Update incident_train_id with VEHICLE_NUMBER from MOBILE_DETAILS
-                string updateQuery = @"
-        UPDATE incident
-        SET 
-            incident_train_id = @incident_train_id
-        WHERE seqnos = @seqnos;";
-
-                using (SqlCommand command = new SqlCommand(updateQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@seqnos", GetSafeValue(mobileDetailsData, row, "SEQNOS"));
-                    command.Parameters.AddWithValue("@incident_train_id", GetSafeValue(mobileDetailsData, row, "VEHICLE_NUMBER"));
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-        */
 
 
 
-
-        private void UpdateTrainCarAndIncidentTables(DataTable derailedUnitsData, SqlConnection connection)
+        private void UpdateIncidentTrainCarTable(DataTable derailedUnitsData, SqlConnection connection)
         {
             foreach (DataRow row in derailedUnitsData.Rows)
             {
                 try
                 {
-                    // Step 1: Fetch the incident_train_id based on TRAIN_NAME_NUMBER and TRAIN_TYPE
-                    string fetchTrainIdQuery = @"
-            SELECT train_id 
-            FROM incident_train 
-            WHERE name_number = @name_number AND train_type = @train_type";
-
-                    int incidentTrainId = 0;
-                    object nameNumber = GetSafeValue(derailedUnitsData, row, "TRAIN_NAME_NUMBER") ?? "0";
-
-                    using (SqlCommand fetchTrainIdCommand = new SqlCommand(fetchTrainIdQuery, connection))
+                    // Step 1: Fetch SEQNOS and validate
+                    object seqnos = GetSafeValue(derailedUnitsData, row, "SEQNOS");
+                    if (seqnos == DBNull.Value || string.IsNullOrWhiteSpace(seqnos.ToString()))
                     {
-                        fetchTrainIdCommand.Parameters.AddWithValue("@name_number", nameNumber);
-                        fetchTrainIdCommand.Parameters.AddWithValue("@train_type", GetSafeValue(derailedUnitsData, row, "TRAIN_TYPE"));
-                        object result = fetchTrainIdCommand.ExecuteScalar();
-                        incidentTrainId = result != null ? Convert.ToInt32(result) : 0;
+                  //  Message was here 
+                        continue;
                     }
 
-                    if (incidentTrainId == 0)
+                    // Step 2: Fetch incident_train_id from the incident table
+                    string fetchIncidentTrainQuery = @"
+                SELECT incident_train_id
+                FROM incident
+                WHERE seqnos = @seqnos";
+
+                    // Show the SQL statement for debugging
+                    
+
+                    object incidentTrainId = null;
+                    using (SqlCommand fetchIncidentTrainCommand = new SqlCommand(fetchIncidentTrainQuery, connection))
                     {
-                        Console.WriteLine($"Skipping row: TRAIN_NAME_NUMBER={nameNumber}, no matching train_id found.");
-                        continue; // Skip if no matching train_id
+                        fetchIncidentTrainCommand.Parameters.AddWithValue("@seqnos", seqnos);
+                        incidentTrainId = fetchIncidentTrainCommand.ExecuteScalar();
                     }
 
-                    // Step 2: Insert into incident_train_car
-                    string insertTrainCarQuery = @"
-            INSERT INTO incident_train_car (car_number, car_content, position_in_train, car_type, incident_train_id)
-            VALUES (@car_number, @car_content, @position_in_train, @car_type, @incident_train_id)";
+                    int trainId = 0;
 
-                    using (SqlCommand insertTrainCarCommand = new SqlCommand(insertTrainCarQuery, connection))
+                    // Step 3: If no incident_train_id, create a new train entry
+                    if (incidentTrainId == DBNull.Value || incidentTrainId == null)
                     {
-                        var carNumber = GetSafeValue(derailedUnitsData, row, "CAR_NUMBER");
-                        var carContent = GetSafeValue(derailedUnitsData, row, "CAR_CONTENT");
-                        var positionInTrain = GetSafeValue(derailedUnitsData, row, "POSITION_IN_TRAIN");
-                        var carType = GetSafeValue(derailedUnitsData, row, "DERAILED_TYPE");
+                        object trainName = GetSafeValue(derailedUnitsData, row, "TRAIN_NAME_NUMBER");
+                        object trainType = GetSafeValue(derailedUnitsData, row, "DERAILED_TYPE");
 
-                        // Ensure no nulls for NOT NULL columns
-                        if (carNumber == DBNull.Value || carContent == DBNull.Value || carType == DBNull.Value)
+                        if (trainName == DBNull.Value || string.IsNullOrWhiteSpace(trainName.ToString()))
                         {
-                            Console.WriteLine($"Skipping row due to null values: CAR_NUMBER={carNumber}, CAR_CONTENT={carContent}, CAR_TYPE={carType}");
+                            // was a message box
                             continue;
                         }
 
-                        // Set default values for nullable columns if needed
-                        positionInTrain = positionInTrain == DBNull.Value ? 0 : positionInTrain;
+                        string insertTrainQuery = @"
+                    INSERT INTO incident_train (name_number, train_type)
+                    OUTPUT INSERTED.train_id
+                    VALUES (@name_number, @train_type)";
 
-                        // Log values being inserted
-                        Console.WriteLine($"Inserting: CAR_NUMBER={carNumber}, CAR_CONTENT={carContent}, POSITION_IN_TRAIN={positionInTrain}, CAR_TYPE={carType}, INCIDENT_TRAIN_ID={incidentTrainId}");
+                        
 
-                        insertTrainCarCommand.Parameters.AddWithValue("@car_number", carNumber);
-                        insertTrainCarCommand.Parameters.AddWithValue("@car_content", carContent);
-                        insertTrainCarCommand.Parameters.AddWithValue("@position_in_train", positionInTrain);
-                        insertTrainCarCommand.Parameters.AddWithValue("@car_type", carType);
-                        insertTrainCarCommand.Parameters.AddWithValue("@incident_train_id", incidentTrainId);
+                        using (SqlCommand insertTrainCommand = new SqlCommand(insertTrainQuery, connection))
+                        {
+                            insertTrainCommand.Parameters.AddWithValue("@name_number", trainName);
+                            insertTrainCommand.Parameters.AddWithValue("@train_type", trainType);
 
-                        insertTrainCarCommand.ExecuteNonQuery();
+                            object result = insertTrainCommand.ExecuteScalar();
+                            trainId = result != null ? Convert.ToInt32(result) : 0;
+                        }
+
+                        if (trainId > 0)
+                        {
+                            string updateIncidentQuery = @"
+                        UPDATE incident
+                        SET incident_train_id = @train_id
+                        WHERE seqnos = @seqnos";
+
+                            
+
+                            using (SqlCommand updateIncidentCommand = new SqlCommand(updateIncidentQuery, connection))
+                            {
+                                updateIncidentCommand.Parameters.AddWithValue("@train_id", trainId);
+                                updateIncidentCommand.Parameters.AddWithValue("@seqnos", seqnos);
+                                updateIncidentCommand.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        trainId = Convert.ToInt32(incidentTrainId);
+                    }
+
+                    // Step 4: Insert data into incident_train_car table
+                    if (trainId > 0)
+                    {
+                        string insertTrainCarQuery = @"
+                    INSERT INTO incident_train_car (car_number, car_content, position_in_train, car_type, incident_train_id)
+                    VALUES (@car_number, @car_content, @position_in_train, @car_type, @incident_train_id)";
+
+                        object carNumber = GetSafeValue(derailedUnitsData, row, "CAR_NUMBER");
+                        object carContent = GetSafeValue(derailedUnitsData, row, "CAR_CONTENT") ?? "UNKNOWN";
+                        object positionInTrain = GetSafeValue(derailedUnitsData, row, "POSITION_IN_TRAIN") ?? 0; // Default to 0
+                        object carType = GetSafeValue(derailedUnitsData, row, "DERAILED_TYPE");
+
+                        // Show the SQL statement for debugging
+                       
+                        using (SqlCommand insertTrainCarCommand = new SqlCommand(insertTrainCarQuery, connection))
+                        {
+                            insertTrainCarCommand.Parameters.AddWithValue("@car_number", carNumber);
+                            insertTrainCarCommand.Parameters.AddWithValue("@car_content", carContent);
+                            insertTrainCarCommand.Parameters.AddWithValue("@position_in_train", positionInTrain);
+                            insertTrainCarCommand.Parameters.AddWithValue("@car_type", carType);
+                            insertTrainCarCommand.Parameters.AddWithValue("@incident_train_id", trainId);
+
+                            insertTrainCarCommand.ExecuteNonQuery();
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error processing row: {row["CAR_NUMBER"]}. Exception: {ex.Message}");
+                    // Displaied a popup at one time
+                    
                 }
             }
         }
@@ -421,6 +474,11 @@ namespace Excel_Import
 
 
 
+
+
+
+
+        ///////////////////////////////////////////////
 
 
 
