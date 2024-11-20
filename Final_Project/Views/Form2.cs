@@ -1,41 +1,42 @@
-using System;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using ClosedXML.Excel;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
+using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Views
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
-            this.Load += Form1_Load;
+            this.Load += Form2_Load;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             LoadSpecificColumns();
+            dataGridView1.AllowUserToResizeRows = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
         }
-
         private void LoadSpecificColumns()
         {
-            
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
-
-            string query = "SELECT company_id, company_name, org_type FROM company";
+            string query = "SELECT railroad_id, railroad_name FROM railroad;";
 
             try
             {
@@ -51,7 +52,6 @@ namespace Views
                             dataGridView1.DataSource = dataTable;
                             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         }
                     }
                 }
@@ -60,12 +60,7 @@ namespace Views
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

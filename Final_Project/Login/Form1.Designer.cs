@@ -106,6 +106,7 @@
             Controls.Add(label1);
             Controls.Add(textBox1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Form1_Load;
             ResumeLayout(false);

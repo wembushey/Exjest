@@ -86,21 +86,21 @@
             // addUserToolStripMenuItem
             // 
             addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            addUserToolStripMenuItem.Size = new Size(180, 22);
+            addUserToolStripMenuItem.Size = new Size(168, 22);
             addUserToolStripMenuItem.Text = "Add User";
             addUserToolStripMenuItem.Click += addUserToolStripMenuItem_Click;
             // 
             // removeUserToolStripMenuItem
             // 
             removeUserToolStripMenuItem.Name = "removeUserToolStripMenuItem";
-            removeUserToolStripMenuItem.Size = new Size(180, 22);
+            removeUserToolStripMenuItem.Size = new Size(168, 22);
             removeUserToolStripMenuItem.Text = "Remove User";
             removeUserToolStripMenuItem.Click += removeUserToolStripMenuItem_Click;
             // 
             // modifyUserToolStripMenuItem
             // 
             modifyUserToolStripMenuItem.Name = "modifyUserToolStripMenuItem";
-            modifyUserToolStripMenuItem.Size = new Size(180, 22);
+            modifyUserToolStripMenuItem.Size = new Size(168, 22);
             modifyUserToolStripMenuItem.Text = "Change Password";
             modifyUserToolStripMenuItem.Click += modifyUserToolStripMenuItem_Click;
             // 
@@ -130,6 +130,7 @@
             railroadsToolStripMenuItem.Name = "railroadsToolStripMenuItem";
             railroadsToolStripMenuItem.Size = new Size(180, 22);
             railroadsToolStripMenuItem.Text = "Railroads";
+            railroadsToolStripMenuItem.Click += railroadsToolStripMenuItem_Click;
             // 
             // Main_Page
             // 
