@@ -41,13 +41,13 @@ using Views;
 
         private void removeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+        UserControl.Form2 form2 = new UserControl.Form2();
             form2.ShowDialog();
         }
 
         private void modifyUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+        UserControl.Form3 form3 = new UserControl.Form3();
             form3.ShowDialog();
         }
 
