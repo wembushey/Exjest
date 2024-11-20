@@ -21,7 +21,7 @@ using Views;
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {// Windows sizing
         this.WindowState = FormWindowState.Maximized;
         this.FormBorderStyle = FormBorderStyle.Sizable;
     }
