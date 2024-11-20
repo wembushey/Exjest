@@ -426,3 +426,9 @@ E:\final\Final_Project\Final_Project\obj\Debug\net8.0-windows\refint\Final_Proje
 E:\final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.pdb
 E:\final\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.genruntimeconfig.cache
 E:\final\Final_Project\Final_Project\obj\Debug\net8.0-windows\ref\Final_Project.dll
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.deps.json
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.runtimeconfig.json
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.exe
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.dll
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.pdb
+F:\final\Final_Project\Final_Project\bin\Debug\net8.0-windows\Views.dll.config

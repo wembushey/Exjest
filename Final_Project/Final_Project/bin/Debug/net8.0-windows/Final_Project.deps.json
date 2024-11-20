@@ -11,6 +11,7 @@
           "Excel_Import": "1.0.0",
           "Microsoft.Extensions.Configuration": "9.0.0",
           "UserControl": "1.0.0",
+          "Views": "1.0.0",
           "datahold": "1.0.0"
         },
         "runtime": {
@@ -541,6 +542,18 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Views/1.0.0": {
+        "dependencies": {
+          "ClosedXML": "0.104.1",
+          "System.Data.SqlClient": "4.9.0"
+        },
+        "runtime": {
+          "Views.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -911,6 +924,11 @@
       "sha512": ""
     },
     "UserControl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Views/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

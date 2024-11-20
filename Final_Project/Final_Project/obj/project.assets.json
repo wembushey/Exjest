@@ -870,6 +870,23 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
+      },
+      "Views/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ClosedXML": "0.104.1",
+          "System.Data.SqlClient": "4.9.0"
+        },
+        "compile": {
+          "bin/placeholder/Views.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Views.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -2324,6 +2341,11 @@
       "type": "project",
       "path": "../UserControl/UserControl.csproj",
       "msbuildProject": "../UserControl/UserControl.csproj"
+    },
+    "Views/1.0.0": {
+      "type": "project",
+      "path": "../Views/Views.csproj",
+      "msbuildProject": "../Views/Views.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2331,6 +2353,7 @@
       "Excel_Import >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 9.0.0",
       "UserControl >= 1.0.0",
+      "Views >= 1.0.0",
       "datahold >= 1.0.0"
     ]
   },
@@ -2375,6 +2398,9 @@
             },
             "F:\\final\\Final_Project\\UserControl\\UserControl.csproj": {
               "projectPath": "F:\\final\\Final_Project\\UserControl\\UserControl.csproj"
+            },
+            "F:\\final\\Final_Project\\Views\\Views.csproj": {
+              "projectPath": "F:\\final\\Final_Project\\Views\\Views.csproj"
             }
           }
         }

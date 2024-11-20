@@ -483,3 +483,9 @@ E:\final\Final_Project\Login\obj\Debug\net8.0-windows\refint\Login.dll
 E:\final\Final_Project\Login\obj\Debug\net8.0-windows\Login.pdb
 E:\final\Final_Project\Login\obj\Debug\net8.0-windows\Login.genruntimeconfig.cache
 E:\final\Final_Project\Login\obj\Debug\net8.0-windows\ref\Login.dll
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.deps.json
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.runtimeconfig.json
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.exe
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.dll
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.pdb
+F:\final\Final_Project\Login\bin\Debug\net8.0-windows\Views.dll.config

@@ -114,20 +114,21 @@
             // incidentsToolStripMenuItem
             // 
             incidentsToolStripMenuItem.Name = "incidentsToolStripMenuItem";
-            incidentsToolStripMenuItem.Size = new Size(134, 22);
+            incidentsToolStripMenuItem.Size = new Size(180, 22);
             incidentsToolStripMenuItem.Text = "Incidents";
             incidentsToolStripMenuItem.Click += incidentsToolStripMenuItem_Click;
             // 
             // companiesToolStripMenuItem
             // 
             companiesToolStripMenuItem.Name = "companiesToolStripMenuItem";
-            companiesToolStripMenuItem.Size = new Size(134, 22);
+            companiesToolStripMenuItem.Size = new Size(180, 22);
             companiesToolStripMenuItem.Text = "Companies";
+            companiesToolStripMenuItem.Click += companiesToolStripMenuItem_Click;
             // 
             // railroadsToolStripMenuItem
             // 
             railroadsToolStripMenuItem.Name = "railroadsToolStripMenuItem";
-            railroadsToolStripMenuItem.Size = new Size(134, 22);
+            railroadsToolStripMenuItem.Size = new Size(180, 22);
             railroadsToolStripMenuItem.Text = "Railroads";
             // 
             // Main_Page

@@ -2,8 +2,9 @@ using System;
 using Excel_Import;
 using datahold;
 using UserControl;
-namespace Final_Project
-{
+namespace Final_Project;
+using Views;
+
     public partial class Main_Page : Form
     {
         public Main_Page()
@@ -31,9 +32,8 @@ namespace Final_Project
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             // Create an instance of Form1 from the UserControl project
-            Form1 form1 = new Form1();
+            UserControl.Form1 form1 = new UserControl.Form1();
 
             // Show Form1 as a modal dialog
             form1.ShowDialog();
@@ -60,5 +60,11 @@ namespace Final_Project
         {
 
         }
+
+        private void companiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        Views.Form1 form1 = new Views.Form1();
+        form1.ShowDialog();
     }
-}
+    }
+

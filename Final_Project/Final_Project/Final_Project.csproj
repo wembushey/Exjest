@@ -20,6 +20,7 @@
     <ProjectReference Include="..\datahold\datahold.csproj" />
     <ProjectReference Include="..\Excel_Import\Excel_Import.csproj" />
     <ProjectReference Include="..\UserControl\UserControl.csproj" />
+	<ProjectReference Include="..\Views\Views.csproj" />
   </ItemGroup>
 
 </Project>
