@@ -65,5 +65,30 @@ namespace Views
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {// SEQNOS search
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        { // State Search
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        { // Fatalities or Injuries Search
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        { // Date and Time Search
+
+        }
     }
 }
