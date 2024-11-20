@@ -36,4 +36,26 @@
 
 #### 11/10 - 11/12
 
-- Got the inporting function working
+- Got the inporting function "working"
+
+#### 11/13 - 11/14
+
+- Got the import kinda working
+
+#### 11/15
+
+- User configuration pages were done
+
+#### 11/16 - 11/17
+
+- Restarted the import page code
+
+#### 11/18 - 11/19
+
+- Finished the import code for the Excel document
+
+#### 11/20
+
+- Form page for Companies is started
+- Form page for Railroads is started
+- Fixed some relation bugs with the primary page
