@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\final\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|f:\\final\\final_project\\usercontrol\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|solutionrelative:usercontrol\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|f:\\final\\final_project\\usercontrol\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|solutionrelative:usercontrol\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|f:\\final\\final_project\\usercontrol\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B135827F-E62C-4F15-BB89-94394E4C85B1}|UserControl\\UserControl.csproj|solutionrelative:usercontrol\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "F:\\final\\Final_Project\\UserControl\\Form2.cs",
-              "RelativeDocumentMoniker": "UserControl\\Form2.cs",
-              "ToolTip": "F:\\final\\Final_Project\\UserControl\\Form2.cs [Design]",
-              "RelativeToolTip": "UserControl\\Form2.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\UserControl\\Form3.cs",
+              "RelativeDocumentMoniker": "UserControl\\Form3.cs",
+              "ToolTip": "F:\\final\\Final_Project\\UserControl\\Form3.cs",
+              "RelativeToolTip": "UserControl\\Form3.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAASwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T23:07:18.946Z",
+              "WhenOpened": "2024-11-20T23:27:16.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "F:\\final\\Final_Project\\UserControl\\Form3.cs",
+              "RelativeDocumentMoniker": "UserControl\\Form3.cs",
+              "ToolTip": "F:\\final\\Final_Project\\UserControl\\Form3.cs [Design]",
+              "RelativeToolTip": "UserControl\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T23:26:51.438Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -39,7 +39,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 47);
+            textBox1.Location = new Point(78, 33);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(178, 23);
             textBox1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(235, 47);
+            textBox2.Location = new Point(78, 133);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(178, 23);
             textBox2.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(235, 113);
+            textBox3.Location = new Point(78, 199);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(178, 23);
             textBox3.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 23);
+            label1.Location = new Point(78, 9);
             label1.Name = "label1";
             label1.Size = new Size(52, 21);
             label1.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(235, 89);
+            label2.Location = new Point(78, 175);
             label2.Name = "label2";
             label2.Size = new Size(112, 21);
             label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(235, 23);
+            label3.Location = new Point(78, 109);
             label3.Name = "label3";
             label3.Size = new Size(105, 21);
             label3.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(285, 161);
+            button1.Location = new Point(128, 247);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(425, 208);
+            ClientSize = new Size(343, 286);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -114,7 +114,9 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Change Password";
+            Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();
         }
