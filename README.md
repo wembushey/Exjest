@@ -59,3 +59,4 @@
 - Form page for Companies is started
 - Form page for Railroads is started
 - Fixed some relation bugs with the primary page
+- Form page for Incidents is started
