@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {}
+    "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj": {
+    "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj",
+        "projectUniqueName": "F:\\final\\Final_Project\\datahold\\datahold.csproj",
         "projectName": "datahold",
-        "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj",
-        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\obj\\",
+        "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\final\\Final_Project\\datahold\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
+    "F:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj",
+        "projectUniqueName": "F:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj",
         "projectName": "Excel_Import",
-        "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj",
-        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\obj\\",
+        "projectPath": "F:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\final\\Final_Project\\Excel_Import\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,8 +98,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj": {
-                "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj"
+              "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
+                "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj"
               }
             }
           }
@@ -151,24 +151,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {
+    "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
+        "projectUniqueName": "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
         "projectName": "Final_Project",
-        "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
-        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Final_Project\\obj\\",
+        "projectPath": "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\final\\Final_Project\\Final_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -184,14 +184,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj": {
-                "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\datahold\\datahold.csproj"
+              "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
+                "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj"
               },
-              "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
-                "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj"
+              "F:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj": {
+                "projectPath": "F:\\final\\Final_Project\\Excel_Import\\Excel_Import.csproj"
               },
-              "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj": {
-                "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj"
+              "F:\\final\\Final_Project\\UserControl\\UserControl.csproj": {
+                "projectPath": "F:\\final\\Final_Project\\UserControl\\UserControl.csproj"
               }
             }
           }
@@ -235,24 +235,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj": {
+    "F:\\final\\Final_Project\\UserControl\\UserControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj",
+        "projectUniqueName": "F:\\final\\Final_Project\\UserControl\\UserControl.csproj",
         "projectName": "UserControl",
-        "projectPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\UserControl.csproj",
-        "packagesPath": "C:\\Users\\Wayne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wayne\\Desktop\\final\\Final_Project\\UserControl\\obj\\",
+        "projectPath": "F:\\final\\Final_Project\\UserControl\\UserControl.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\final\\Final_Project\\UserControl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wayne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -309,7 +309,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
