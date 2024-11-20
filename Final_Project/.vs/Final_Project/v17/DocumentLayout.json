@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "F:\\final\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\final\\final_project\\login\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|f:\\final\\final_project\\excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|solutionrelative:excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|f:\\final\\final_project\\excel_import\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|solutionrelative:excel_import\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,41 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.config",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Login\\App.config",
-              "RelativeDocumentMoniker": "Login\\App.config",
-              "ToolTip": "F:\\final\\Final_Project\\Login\\App.config",
-              "RelativeToolTip": "Login\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-18T21:05:26.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Excel_Import\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Excel_Import\\Form1.Designer.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Excel_Import\\Form1.Designer.cs",
-              "RelativeToolTip": "Excel_Import\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form1.cs",
+              "RelativeDocumentMoniker": "Views\\Form1.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form1.cs",
+              "RelativeToolTip": "Views\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:15:35.304Z",
+              "WhenOpened": "2024-11-19T21:05:12.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Excel_Import\\Form1.cs",
-              "RelativeDocumentMoniker": "Excel_Import\\Form1.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Excel_Import\\Form1.cs",
-              "RelativeToolTip": "Excel_Import\\Form1.cs",
-              "ViewState": "AgIAAHcBAAAAAAAAAAAgwJABAAAsAAAAAAAAAA==",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form1.cs",
+              "RelativeDocumentMoniker": "Views\\Form1.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form1.cs [Design]",
+              "RelativeToolTip": "Views\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:35:32.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T20:58:03.312Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
