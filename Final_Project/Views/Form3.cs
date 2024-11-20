@@ -31,7 +31,7 @@ namespace Views
         private void LoadSpecificColumns()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
-            string query = "SELECT railroad_id, railroad_name FROM railroad;";
+            string query = "SELECT seqnos, date_time_complete, call_type, responsible_state,type_of_incident from incident;";
 
             try
             {
@@ -46,7 +46,12 @@ namespace Views
                             adapter.Fill(dataTable);
                             dataGridView1.DataSource = dataTable;
                             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+
                         }
                     }
                 }
