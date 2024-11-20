@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "F:\\final\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|F:\\final\\Final_Project\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|f:\\final\\final_project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|f:\\final\\final_project\\final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F1D346D-AE1B-4C14-889E-A52C6720B03D}|Final_Project\\Final_Project.csproj|solutionrelative:final_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|f:\\final\\final_project\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,81 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form2.cs",
-              "RelativeDocumentMoniker": "Views\\Form2.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Views\\Form2.cs [Design]",
-              "RelativeToolTip": "Views\\Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T22:10:51.477Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Login\\Form1.cs",
-              "RelativeDocumentMoniker": "Login\\Form1.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Login\\Form1.cs [Design]",
-              "RelativeToolTip": "Login\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T22:06:24.491Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Final_Project\\Form1.cs",
-              "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Final_Project\\Form1.cs [Design]",
-              "RelativeToolTip": "Final_Project\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:47:25.641Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form2.cs",
-              "RelativeDocumentMoniker": "Views\\Form2.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Views\\Form2.cs",
-              "RelativeToolTip": "Views\\Form2.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:45:00.522Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form1.cs",
-              "RelativeDocumentMoniker": "Views\\Form1.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Views\\Form1.cs",
-              "RelativeToolTip": "Views\\Form1.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wDUAAAAzAAAAAAAAAA==",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Final_Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Final_Project\\Form1.cs",
+              "RelativeToolTip": "Final_Project\\Form1.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAIAxwD8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T21:05:12.5Z",
+              "WhenOpened": "2024-11-20T22:30:03.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form1.cs",
-              "RelativeDocumentMoniker": "Views\\Form1.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Views\\Form1.cs [Design]",
-              "RelativeToolTip": "Views\\Form1.cs [Design]",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Final_Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Final_Project\\Form1.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Final_Project\\Form1.cs [Design]",
+              "RelativeToolTip": "Final_Project\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T20:58:03.312Z",
+              "WhenOpened": "2024-11-20T22:30:00.631Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3.cs",
+              "RelativeDocumentMoniker": "Views\\Form3.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form3.cs",
+              "RelativeToolTip": "Views\\Form3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T22:27:19.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3.cs",
+              "RelativeDocumentMoniker": "Views\\Form3.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form3.cs [Design]",
+              "RelativeToolTip": "Views\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T22:26:49.907Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form2.cs",
+              "RelativeDocumentMoniker": "Views\\Form2.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form2.cs",
+              "RelativeToolTip": "Views\\Form2.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T21:45:00.522Z",
+              "EditorCaption": ""
             }
           ]
         }

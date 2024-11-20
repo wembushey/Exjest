@@ -60,7 +60,8 @@ public partial class Main_Page : Form
 
     private void incidentsToolStripMenuItem_Click(object sender, EventArgs e)
     {
-
+        Views.Form3 form3 = new Views.Form3();
+        form3.ShowDialog();
     }
 
     private void companiesToolStripMenuItem_Click(object sender, EventArgs e)
