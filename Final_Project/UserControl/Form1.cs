@@ -66,6 +66,9 @@ namespace UserControl
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("User created successfully!");
+                        textBox1.Text = string.Empty;
+                        textBox2.Text = string.Empty;
+                        textBox2.Focus();
                     }
                 }
                 catch (Exception ex)

@@ -51,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(111, 9);
+            label2.Location = new Point(38, 14);
             label2.Name = "label2";
             label2.Size = new Size(52, 21);
             label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(111, 75);
+            label3.Location = new Point(38, 80);
             label3.Name = "label3";
             label3.Size = new Size(76, 21);
             label3.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(111, 33);
+            textBox2.Location = new Point(38, 38);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(219, 23);
             textBox2.TabIndex = 6;
@@ -86,7 +86,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(111, 99);
+            textBox1.Location = new Point(38, 104);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(219, 23);
             textBox1.TabIndex = 7;
@@ -94,7 +94,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(163, 155);
+            button1.Location = new Point(93, 148);
             button1.Name = "button1";
             button1.Size = new Size(95, 23);
             button1.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(437, 207);
+            ClientSize = new Size(290, 186);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(textBox2);
@@ -115,6 +115,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Create User";
             ResumeLayout(false);
             PerformLayout();

@@ -130,7 +130,7 @@ namespace Login
             }
         }
 
-        // Method to check if the connection string is valid (unchanged)
+        // Method to check if the connection string is valid 
         private bool IsConnectionStringValid()
         {
             try
