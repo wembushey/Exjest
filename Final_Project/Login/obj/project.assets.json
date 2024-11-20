@@ -2377,8 +2377,7 @@
     "net8.0-windows7.0": [
       "DocumentFormat.OpenXml >= 3.1.1",
       "Final_Project >= 1.0.0",
-      "System.Data.SqlClient >= 4.9.0",
-      "datahold >= 1.0.0"
+      "System.Data.SqlClient >= 4.9.0"
     ]
   },
   "packageFolders": {
@@ -2414,9 +2413,6 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
-              "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj"
-            },
             "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {
               "projectPath": "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj"
             }

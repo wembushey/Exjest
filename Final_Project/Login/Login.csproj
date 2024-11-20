@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\datahold\datahold.csproj" />
     <ProjectReference Include="..\Final_Project\Final_Project.csproj" />
   </ItemGroup>
 

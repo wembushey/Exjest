@@ -10,8 +10,7 @@
         "dependencies": {
           "DocumentFormat.OpenXml": "3.1.1",
           "Final_Project": "1.0.0",
-          "System.Data.SqlClient": "4.9.0",
-          "datahold": "1.0.0"
+          "System.Data.SqlClient": "4.9.0"
         },
         "runtime": {
           "Login.dll": {}

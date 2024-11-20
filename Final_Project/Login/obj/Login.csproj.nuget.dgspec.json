@@ -271,9 +271,6 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "F:\\final\\Final_Project\\datahold\\datahold.csproj": {
-                "projectPath": "F:\\final\\Final_Project\\datahold\\datahold.csproj"
-              },
               "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj": {
                 "projectPath": "F:\\final\\Final_Project\\Final_Project\\Final_Project.csproj"
               }

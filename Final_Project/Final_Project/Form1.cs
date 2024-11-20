@@ -7,7 +7,8 @@ using Views;
 
     public partial class Main_Page : Form
     {
-        public Main_Page()
+
+    public Main_Page()
         {
             InitializeComponent();
         }
