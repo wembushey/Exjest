@@ -21,7 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "datahold", "datahold\dataho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserControl", "UserControl\UserControl.csproj", "{B135827F-E62C-4F15-BB89-94394E4C85B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{50C2A090-98A2-4C1B-8411-68CDF9789E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Views", "Views\Views.csproj", "{50C2A090-98A2-4C1B-8411-68CDF9789E18}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35CF5AF4-D703-41CB-B83D-3EE9A3F739BE} = {35CF5AF4-D703-41CB-B83D-3EE9A3F739BE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
