@@ -61,3 +61,4 @@
 - Fixed some relation bugs with the primary page
 - Form page for Incidents is started
 - Fixed GUI on the User Control pages
+- Companies page is done
