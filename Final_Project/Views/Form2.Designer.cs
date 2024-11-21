@@ -34,10 +34,12 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Window;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(443, 545);
+            dataGridView1.Size = new Size(467, 569);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 

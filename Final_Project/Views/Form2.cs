@@ -32,6 +32,7 @@ namespace Views
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
         }
         private void LoadSpecificColumns()
         {
@@ -59,6 +60,19 @@ namespace Views
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure a valid row is clicked
+            {
+                // Get the selected railroad's ID
+                string railroadId = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(); // Use index or "railroad_id"
+
+                // Open Form2Sub with the selected railroad ID
+                Form2Sub form2Sub = new Form2Sub(railroadId);
+                form2Sub.ShowDialog();
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Views
 {
-    partial class Form1Sub
+    partial class Form2Sub
     {
         /// <summary>
         /// Required designer variable.
@@ -39,19 +39,19 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1223, 288);
+            dataGridView1.Size = new Size(1163, 288);
             dataGridView1.TabIndex = 0;
             // 
-            // Form1Sub
+            // Form2Sub
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1223, 288);
+            ClientSize = new Size(1163, 288);
             Controls.Add(dataGridView1);
-            Name = "Form1Sub";
+            Name = "Form2Sub";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "All Incidents from Company";
-            Load += Form1Sub_Load;
+            Text = "All Incidents";
+            Load += Form2Sub_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
