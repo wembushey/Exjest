@@ -1,14 +1,14 @@
 ﻿namespace Views
 {
-    partial class Form1
+    partial class Form1Sub
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -36,23 +36,22 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.Window;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(548, 578);
+            dataGridView1.Size = new Size(1223, 423);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            dataGridView1.DoubleClick += DoubleClick;
             // 
-            // Form1
+            // Form1Sub
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(572, 602);
+            ClientSize = new Size(1223, 423);
             Controls.Add(dataGridView1);
-            Name = "Form1";
+            Name = "Form1Sub";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Companies";
+            Text = "All Incidents from Company";
+            Load += Form1Sub_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

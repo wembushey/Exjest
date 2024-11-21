@@ -28,11 +28,13 @@ namespace Views
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+
         }
 
         private void LoadSpecificColumns()
         {
-            
+
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"]?.ConnectionString;
 
             string query = "SELECT company_id, company_name, org_type FROM company";
@@ -65,7 +67,24 @@ namespace Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the selected company's ID
+                string companyId = dataGridView1.Rows[e.RowIndex].Cells["company_id"].Value.ToString();
+
+                // Open Form1Sub with the selected company_id
+                Form1Sub form1Sub = new Form1Sub(companyId);
+                form1Sub.ShowDialog();
+            }
         }
     }
 }
