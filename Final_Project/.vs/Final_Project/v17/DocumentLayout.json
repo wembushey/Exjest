@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "F:\\final\\Final_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3sub.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3sub.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|f:\\final\\final_project\\excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8402F-CEA6-4E1A-B40E-6950EEE90ACC}|Excel_Import\\Excel_Import.csproj|solutionrelative:excel_import\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|F:\\final\\Final_Project\\views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|f:\\final\\final_project\\views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|F:\\final\\Final_Project\\views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50C2A090-98A2-4C1B-8411-68CDF9789E18}|Views\\Views.csproj|solutionrelative:views\\form3sub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,37 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form3Sub.Designer.cs",
-              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3Sub.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\Form3Sub.Designer.cs",
-              "ToolTip": "F:\\final\\Final_Project\\Views\\Form3Sub.Designer.cs",
-              "RelativeToolTip": "Views\\Form3Sub.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAUAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Excel_Import\\Form1.cs",
+              "RelativeDocumentMoniker": "Excel_Import\\Form1.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Excel_Import\\Form1.cs",
+              "RelativeToolTip": "Excel_Import\\Form1.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAcwMUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:39:46.755Z",
+              "WhenOpened": "2024-11-21T21:02:33.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form2.cs",
+              "RelativeDocumentMoniker": "Views\\Form2.cs",
+              "ToolTip": "F:\\final\\Final_Project\\Views\\Form2.cs",
+              "RelativeToolTip": "Views\\Form2.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwEwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T20:27:46.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form3Sub.cs",
               "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3Sub.cs",
               "RelativeDocumentMoniker": "Views\\Form3Sub.cs",
               "ToolTip": "F:\\final\\Final_Project\\Views\\Form3Sub.cs",
               "RelativeToolTip": "Views\\Form3Sub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:39:17.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Form3Sub.cs [Design]",
               "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3Sub.cs",
               "RelativeDocumentMoniker": "Views\\Form3Sub.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3.cs",
               "RelativeDocumentMoniker": "Views\\Form3.cs",
@@ -84,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Form3.cs",
               "DocumentMoniker": "F:\\final\\Final_Project\\Views\\Form3.cs",
               "RelativeDocumentMoniker": "Views\\Form3.cs",
               "ToolTip": "F:\\final\\Final_Project\\Views\\Form3.cs",
               "RelativeToolTip": "Views\\Form3.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAwGYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T15:30:07.499Z",
               "EditorCaption": ""

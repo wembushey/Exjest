@@ -175,20 +175,49 @@ namespace Excel_Import
         {
             DataTable dataTable = new DataTable();
 
-            var headers = worksheet.FirstRowUsed().Cells().Select(cell => cell.GetString().Trim()).ToList();
-            foreach (var header in headers)
+            try
             {
-                dataTable.Columns.Add(header);
+                // Check if the worksheet is null
+                if (worksheet == null)
+                {
+                    throw new ArgumentNullException(nameof(worksheet), "The worksheet cannot be null.");
+                }
+
+                // Get headers
+                var headers = worksheet.FirstRowUsed()
+                    ?.Cells()
+                    .Select(cell => cell.GetString().Trim())
+                    .ToList();
+
+                if (headers == null || headers.Count == 0)
+                {
+                    throw new InvalidOperationException("No headers found in the worksheet.");
+                }
+
+                foreach (var header in headers)
+                {
+                    dataTable.Columns.Add(header);
+                }
+
+                // Process data rows
+                foreach (var row in worksheet.RowsUsed().Skip(1))
+                {
+                    var rowData = row.Cells(1, headers.Count)
+                        .Select(cell => (object)cell.GetString().Trim())
+                        .ToArray();
+
+                    dataTable.Rows.Add(rowData);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Catch any exception and suppress it
+                Console.WriteLine($"Error: {ex.Message}");
             }
 
-            foreach (var row in worksheet.RowsUsed().Skip(1))
-            {
-                var rowData = row.Cells(1, headers.Count).Select(cell => (object)cell.GetString().Trim()).ToArray();
-                dataTable.Rows.Add(rowData);
-            }
-
-            return dataTable;
+            return dataTable; // Return an empty or partially filled DataTable
         }
+
 
         private void InsertDataIntoIncidentTable(DataTable data, SqlConnection connection)
         {

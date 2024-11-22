@@ -29,6 +29,8 @@ namespace Views
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+
         }
 
         private void InitializeDateTimePicker()
@@ -112,7 +114,6 @@ namespace Views
                             // Load all columns into the incidentTable
                             incidentTable = new DataTable();
                             adapter.Fill(incidentTable);
-
                             // Create a new DataTable with only the visible columns
                             DataTable visibleTable = incidentTable.DefaultView.ToTable(false,
                                 "seqnos",
@@ -128,6 +129,7 @@ namespace Views
                             foreach (DataGridViewColumn column in dataGridView1.Columns)
                             {
                                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                               
                             }
                         }
                     }
@@ -244,6 +246,28 @@ namespace Views
                 }
             }
         }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure it's not the header row
+            {
+                // Get the seqnos of the selected row
+                var seqnos = dataGridView1.Rows[e.RowIndex].Cells["seqnos"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(seqnos))
+                {
+                    // Fetch the corresponding row from the incidentTable
+                    DataRow[] rows = incidentTable.Select($"seqnos = {seqnos}");
+                    if (rows.Length > 0)
+                    {
+                        // Pass the selected data row to the subform
+                        Form3Sub subForm = new Form3Sub(rows[0]);
+                        subForm.ShowDialog(); // Open the form as a modal dialog
+                    }
+                }
+            }
+        }
+
+
 
 
 
