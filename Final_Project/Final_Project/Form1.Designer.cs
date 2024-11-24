@@ -55,7 +55,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, importToolStripMenuItem, usersToolStripMenuItem, dataViewsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1453, 24);
+            menuStrip1.Size = new Size(1924, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -162,7 +162,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(656, 47);
+            label1.Location = new Point(799, 47);
             label1.Name = "label1";
             label1.Size = new Size(174, 29);
             label1.TabIndex = 3;
@@ -170,16 +170,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Window;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(36, 171);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1314, 78);
+            dataGridView1.Size = new Size(1656, 65);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
-            button1.Location = new Point(709, 277);
+            button1.Location = new Point(853, 261);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 5;
@@ -192,7 +193,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(1453, 929);
+            ClientSize = new Size(1924, 929);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
