@@ -42,7 +42,11 @@
             railroadsToolStripMenuItem = new ToolStripMenuItem();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +55,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, importToolStripMenuItem, usersToolStripMenuItem, dataViewsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1035, 24);
+            menuStrip1.Size = new Size(1453, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -154,12 +158,44 @@
             textBox2.TabIndex = 2;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(656, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(174, 29);
+            label1.TabIndex = 3;
+            label1.Text = "Enter Incident";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(36, 171);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1314, 78);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(709, 277);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 5;
+            button1.Text = "Enter Data";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Main_Page
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(1035, 579);
+            ClientSize = new Size(1453, 929);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
+            Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(menuStrip1);
@@ -170,6 +206,7 @@
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,5 +227,8 @@
         private ToolStripMenuItem railroadsToolStripMenuItem;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Label label1;
+        private DataGridView dataGridView1;
+        private Button button1;
     }
 }
