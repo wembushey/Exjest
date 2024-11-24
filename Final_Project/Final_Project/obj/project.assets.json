@@ -2351,6 +2351,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Excel_Import >= 1.0.0",
+      "Microsoft.Data.SqlClient >= 5.2.2",
       "Microsoft.Extensions.Configuration >= 9.0.0",
       "UserControl >= 1.0.0",
       "Views >= 1.0.0",
@@ -2420,6 +2421,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[5.2.2, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[9.0.0, )"

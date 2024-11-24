@@ -18,7 +18,7 @@ namespace Login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,7 +69,10 @@ namespace Login
 
                     if (isAccountValid)
                     {
-                        Main_Page finalProjectForm = new Main_Page();
+                        Main_Page finalProjectForm = new Main_Page
+                        {
+                            LoggedInUsername = username // Pass the logged-in username
+                        };
                         finalProjectForm.Show();
                         this.Hide();
                     }

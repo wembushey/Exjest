@@ -1,0 +1,12 @@
+F:\final\Final_Project\datahold\bin\Debug\net8.0\datahold.deps.json
+F:\final\Final_Project\datahold\bin\Debug\net8.0\datahold.dll
+F:\final\Final_Project\datahold\bin\Debug\net8.0\datahold.pdb
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.GeneratedMSBuildEditorConfig.editorconfig
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.AssemblyInfoInputs.cache
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.AssemblyInfo.cs
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.csproj.CoreCompileInputs.cache
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.sourcelink.json
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.dll
+F:\final\Final_Project\datahold\obj\Debug\net8.0\refint\datahold.dll
+F:\final\Final_Project\datahold\obj\Debug\net8.0\datahold.pdb
+F:\final\Final_Project\datahold\obj\Debug\net8.0\ref\datahold.dll

@@ -9,6 +9,7 @@
       "Final_Project/1.0.0": {
         "dependencies": {
           "Excel_Import": "1.0.0",
+          "Microsoft.Data.SqlClient": "5.2.2",
           "Microsoft.Extensions.Configuration": "9.0.0",
           "UserControl": "1.0.0",
           "Views": "1.0.0",

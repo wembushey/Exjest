@@ -13,13 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\datahold\datahold.csproj" />
-    <ProjectReference Include="..\Excel_Import\Excel_Import.csproj" />
-    <ProjectReference Include="..\UserControl\UserControl.csproj" />
+    <ProjectReference Include="..\Excel_Import\Excel_Import.csproj" />    <ProjectReference Include="..\UserControl\UserControl.csproj" />
 	<ProjectReference Include="..\Views\Views.csproj" />
   </ItemGroup>
 

@@ -40,6 +40,8 @@
             incidentsToolStripMenuItem = new ToolStripMenuItem();
             companiesToolStripMenuItem = new ToolStripMenuItem();
             railroadsToolStripMenuItem = new ToolStripMenuItem();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -114,23 +116,43 @@
             // incidentsToolStripMenuItem
             // 
             incidentsToolStripMenuItem.Name = "incidentsToolStripMenuItem";
-            incidentsToolStripMenuItem.Size = new Size(180, 22);
+            incidentsToolStripMenuItem.Size = new Size(134, 22);
             incidentsToolStripMenuItem.Text = "Incidents";
             incidentsToolStripMenuItem.Click += incidentsToolStripMenuItem_Click;
             // 
             // companiesToolStripMenuItem
             // 
             companiesToolStripMenuItem.Name = "companiesToolStripMenuItem";
-            companiesToolStripMenuItem.Size = new Size(180, 22);
+            companiesToolStripMenuItem.Size = new Size(134, 22);
             companiesToolStripMenuItem.Text = "Companies";
             companiesToolStripMenuItem.Click += companiesToolStripMenuItem_Click;
             // 
             // railroadsToolStripMenuItem
             // 
             railroadsToolStripMenuItem.Name = "railroadsToolStripMenuItem";
-            railroadsToolStripMenuItem.Size = new Size(180, 22);
+            railroadsToolStripMenuItem.Size = new Size(134, 22);
             railroadsToolStripMenuItem.Text = "Railroads";
             railroadsToolStripMenuItem.Click += railroadsToolStripMenuItem_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.Window;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Location = new Point(12, 27);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 14);
+            textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.Window;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Location = new Point(12, 47);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 14);
+            textBox2.TabIndex = 2;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // Main_Page
             // 
@@ -138,6 +160,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(1035, 579);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(menuStrip1);
             Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip1;
@@ -164,5 +188,7 @@
         private ToolStripMenuItem incidentsToolStripMenuItem;
         private ToolStripMenuItem companiesToolStripMenuItem;
         private ToolStripMenuItem railroadsToolStripMenuItem;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

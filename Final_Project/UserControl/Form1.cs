@@ -46,28 +46,33 @@ namespace UserControl
             // Get values from the textboxes
             string username = textBox2.Text;
             string password = textBox1.Text;
+            string showName = textBox3.Text; // Get the show name
 
             // Generate salt and hash the password with the salt
             string salt = GenerateSalt();
             string hashedPassword = HashPassword(password, salt);
 
-            // Store username, hashed password, and salt in the database
+            // Store username, hashed password, salt, and show name in the database
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO Users (name, password, salt) VALUES (@Username, @Password, @Salt)";
+                    string query = "INSERT INTO Users (name, password, salt, showname) VALUES (@Username, @Password, @Salt, @ShowName)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
                         command.Parameters.AddWithValue("@Password", hashedPassword);
                         command.Parameters.AddWithValue("@Salt", salt);
+                        command.Parameters.AddWithValue("@ShowName", showName); // Add show name parameter
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("User created successfully!");
+
+                        // Clear textboxes
                         textBox1.Text = string.Empty;
                         textBox2.Text = string.Empty;
+                        textBox3.Text = string.Empty;
                         textBox2.Focus();
                     }
                 }
@@ -100,6 +105,11 @@ namespace UserControl
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        { // show name
 
         }
     }

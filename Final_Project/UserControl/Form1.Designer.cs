@@ -35,6 +35,8 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             button1 = new Button();
+            label5 = new Label();
+            textBox3 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -53,16 +55,16 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(38, 14);
             label2.Name = "label2";
-            label2.Size = new Size(52, 21);
+            label2.Size = new Size(84, 21);
             label2.TabIndex = 1;
-            label2.Text = "Name";
+            label2.Text = "UserName";
             label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(38, 80);
+            label3.Location = new Point(38, 152);
             label3.Name = "label3";
             label3.Size = new Size(76, 21);
             label3.TabIndex = 2;
@@ -86,7 +88,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(38, 104);
+            textBox1.Location = new Point(38, 176);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(219, 23);
             textBox1.TabIndex = 7;
@@ -94,7 +96,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(93, 148);
+            button1.Location = new Point(97, 245);
             button1.Name = "button1";
             button1.Size = new Size(95, 23);
             button1.TabIndex = 8;
@@ -102,11 +104,31 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(38, 78);
+            label5.Name = "label5";
+            label5.Size = new Size(91, 21);
+            label5.TabIndex = 9;
+            label5.Text = "ShowName";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(38, 102);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(219, 23);
+            textBox3.TabIndex = 10;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(290, 186);
+            ClientSize = new Size(290, 361);
+            Controls.Add(textBox3);
+            Controls.Add(label5);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(textBox2);
@@ -130,5 +152,7 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private Button button1;
+        private Label label5;
+        private TextBox textBox3;
     }
 }
