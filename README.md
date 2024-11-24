@@ -63,3 +63,18 @@
 - Fixed GUI on the User Control pages
 - Companies Form is done
 - Railroads Form is done
+
+#### 11/21-22
+
+- Fixed some bugs with the import code
+- Did the incidents Form
+
+#### 11/23
+
+- Had a fight with Visual Studio
+
+#### 11/24
+
+- Made GUI for setting data
+- Compiled to .exe files
+- Made documentation
